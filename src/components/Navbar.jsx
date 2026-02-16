@@ -125,7 +125,7 @@ export default function Navbar() {
       </div>
 
       <div className={`kg-nav-links ${mobileOpen ? "active" : ""}`}>
-        <Link to="/" onClick={() => setMobileOpen(false)}>Home</Link>
+        <Link to="/" onClick={() => setMobileOpen(false)}>ome</Link>
         <Link to="/about" onClick={() => setMobileOpen(false)}>About</Link>
         <Link to="/phases" onClick={() => setMobileOpen(false)}>Phases</Link>
         <Link to="/schedule" onClick={() => setMobileOpen(false)}>Schedule</Link>
