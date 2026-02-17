@@ -3,7 +3,7 @@
   padding: 160px 8% 100px;
   background: linear-gradient(180deg, #0a0a0a, #111111);
   display: flex;
-  flex-direction: column;   /* Important for bottom button */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -39,7 +39,7 @@
 }
 
 .register-guidelines h3 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 20px;
@@ -49,7 +49,7 @@
 }
 
 .register-guidelines h4 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   margin-top: 30px;
   margin-bottom: 10px;
   font-size: 1.1rem;
@@ -63,7 +63,7 @@
 }
 
 .register-guidelines li {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 8px;
   opacity: 0.9;
 }
@@ -71,20 +71,24 @@
 /* ============================= RIGHT SIDE (RULES BOX) ============================= */
 .register-box {
   width: 100%;
-  padding: 70px 60px;
-  background: rgba(255, 255, 255, 0.04);
+  padding: 50px 48px;
+  background: rgba(255, 255, 255, 0.045);
   border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: 26px;
   backdrop-filter: blur(20px);
   box-shadow: 0 35px 90px rgba(0, 0, 0, 0.85);
-  transition: all 0.4s ease;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+
+  /* ✅ FIXED READABILITY */
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
 }
 
+/* Hover glow only (no movement) */
 .register-box:hover {
-  transform: translateY(-8px);
-  border: 1px solid rgba(212, 175, 55, 0.5);
-  box-shadow: 0 45px 120px rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.55);
+  box-shadow: 0 45px 120px rgba(212, 175, 55, 0.22);
 }
 
 /* Gold highlight strip */
@@ -102,7 +106,7 @@
 
 /* Heading inside rules */
 .register-box h2 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-size: 2.3rem;
   font-weight: 900;
   margin-bottom: 25px;
@@ -112,23 +116,48 @@
 }
 
 .register-box h4 {
-  font-family: 'Orbitron', sans-serif;
-  margin-top: 25px;
-  margin-bottom: 10px;
+  font-family: "Orbitron", sans-serif;
+  margin-top: 34px;
+  margin-bottom: 14px;
   font-size: 1.05rem;
   color: #f5e6b3;
   font-weight: 600;
 }
 
 .register-box ul {
-  padding-left: 18px;
-  line-height: 1.8;
+  padding-left: 20px;
+  line-height: 1.9;
 }
 
 .register-box li {
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 8px;
-  opacity: 0.9;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  opacity: 0.95;
+  font-size: 15.5px;
+}
+
+/* ============================= STICKY FIXED BOX (DESKTOP ONLY) ============================= */
+.fixed-box {
+  position: fixed;
+  top: 110px;
+  right: 8%;
+  width: 38%;
+  max-width: 520px;
+  z-index: 20;
+}
+
+/* ============================= SCROLLBAR STYLE ============================= */
+.register-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.register-box::-webkit-scrollbar-thumb {
+  background: linear-gradient(#d4af37, #f5e6b3);
+  border-radius: 10px;
+}
+
+.register-box::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 /* ============================= BOTTOM REGISTER BUTTON ============================= */
@@ -140,7 +169,7 @@
 }
 
 .register-bottom p {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-size: 16px;
   color: #d0d0d0;
   margin-bottom: 30px;
@@ -180,6 +209,21 @@
 
   .register-bottom {
     margin-top: 70px;
+  }
+
+  /* ✅ Disable sticky in mobile/tablet */
+  .fixed-box {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .register-box {
+    max-height: none;
+    overflow: visible;
+    padding: 44px 28px;
   }
 }
 

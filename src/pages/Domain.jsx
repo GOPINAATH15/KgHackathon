@@ -1,710 +1,884 @@
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
-import "../styles/Domain.css";  
+import "../styles/Domain.css";
 
 import aiImg from "../assets/domain-images/ai.jpeg";
 import healthcareImg from "../assets/domain-images/healthcare.jpeg";
 import sustainableImg from "../assets/domain-images/sustainable.jpeg";
 import womensafetyImg from "../assets/domain-images/womensafety.jpeg";
 
-
 const domainData = {
-
   /* ============================= */
   /* DOMAIN 1 — WOMEN'S SAFETY     */
   /* ============================= */
 
-  "women-cyber-safety": {
+  "cyber-safety-phishing-detection": {
     domainTitle: "Women's Safety & Social Security",
     image: womensafetyImg,
-    objective:
-      "Build technology-driven solutions to enhance physical, digital, and social safety for women and vulnerable communities.",
-    problems: [
-      {
-        title: "Problem Statement : 1 - Cyber Safety Awareness & Phishing Detection Platform",
-        description:
-          "Develop a cybersecurity platform that detects phishing messages, emails, or URLs and provides real-time safety guidance.",
-        additionalContent: [
-          "System should:",
-          "Detect phishing patterns using AI or rule-based analysis.",
-          "Alert users about potential cyber threats.",
-          "Provide educational guidance to improve cyber safety awareness.",
-        ],
-        techStack: {
-          frontend: "React / Next.js / Browser Extension",
-          backend: "Python FastAPI / Node.js",
-          ai: "Hugging Face / scikit-learn",
-          database: "PostgreSQL / Firebase",
-        },
-        features: [
-          "Input Analysis:Text / email / URL analysis",
-          "Phishing risk classification",
-          "Explanation of suspicious content",
-          "Cyber safety tips panel",
-        ],
-        deliverables: [
-          "Sample phishing dataset",
-          "Detection demo",
-          "Explanation of detection logic",
-          "GitHub repo + demo video",
-        ],
-        notes: [
-          "Real email integration not required",
-          "Transparency in classification required",
-        ],
-      },
+
+    problemTitle: "AI-Driven Cyber Safety Awareness & Phishing Detection Platform",
+
+    realWorldContext:
+      "Digital fraud, phishing attacks, and social engineering scams are increasing globally, disproportionately affecting vulnerable users, including women, students, and first-time internet users. Many individuals lack awareness and real-time protection mechanisms against evolving cyber threats.",
+
+    challengeStatement:
+      "Design and develop an intelligent cybersecurity platform capable of detecting suspicious content such as phishing messages, malicious URLs, and fraudulent communications while providing users with real-time alerts and educational safety guidance.",
+
+    targetUsers: [
+      "Students and general internet users",
+      "Women and vulnerable digital users",
+      "Educational institutions",
+      "Cybersecurity awareness organizations"
     ],
+
+    solutionExpectations: [
+      "Analyze text, emails, URLs, or messages for phishing indicators",
+      "Provide risk classification and explanations",
+      "Offer contextual safety tips and awareness modules",
+      "Display user-friendly alerts"
+    ],
+
+    innovationScope: [
+      "AI/NLP-based threat detection",
+      "Browser extensions",
+      "Mobile apps or desktop tools",
+      "Edge security devices",
+      "Explainable AI interfaces"
+    ],
+
+    technicalApproach: [
+      "React / Flutter frontend",
+      "Python FastAPI / Node.js backend",
+      "NLP models / heuristic detection",
+      "Cloud or local processing"
+    ],
+
+    expectedDeliverables: [
+      "Functional prototype (software/hardware/hybrid)",
+      "Threat detection demonstration",
+      "Architecture diagram",
+      "GitHub repository",
+      "Demo video (optional)"
+    ],
+
+    constraintsGuidelines: [
+      "Real email integration optional (simulation allowed)",
+      "Must explain detection logic",
+      "Privacy-focused design encouraged"
+    ]
   },
 
-  "women-night-safety": {
+  "voice-based-safety-assistant": {
     domainTitle: "Women's Safety & Social Security",
     image: womensafetyImg,
-    objective:
-      "Predict unsafe zones during nighttime and help users choose safer routes.",
-    additionalContent: [
-      "System should:",
-      "Analyze datasets (crime reports, lighting, crowd density, etc.) ",
-      "Calculate risk scores.",
-      "Visualize safety zones on maps.",
+
+    problemTitle: "AI-Powered Voice-Based Safety Assistant for Emergency Support",
+
+    realWorldContext:
+      "In emergencies, users may not be able to operate complex interfaces. Voice-based interaction enables faster response, especially for individuals with limited literacy or accessibility needs.",
+
+    challengeStatement:
+      "Develop an intelligent voice-enabled assistant that allows users to trigger emergency actions, request help, and receive safety guidance using natural language commands.",
+
+    targetUsers: [
+      "Women and vulnerable individuals",
+      "Elderly users",
+      "People with accessibility challenges",
+      "Night commuters"
     ],
-    problems: [
-      {
-        title: "Problem Statement : 2 - Night Safety Risk Prediction System",
-        description:
-          "Urban safety varies based on location, time, and environmental conditions. Develop an AI-driven system that predicts safety risk levels for different areas during nighttime and provides safer route suggestions or alerts.",
-        techStack: {
-          frontend: "React + Google Maps / Mapbox",
-          backend: "Node.js / Python FastAPI",
-          ai: "pandas / scikit-learn",
-          database: "PostgreSQL",
-        },
-        features: [
-          "Location search",
-          "Risk score visualization",
-          "Safe vs risky zone mapping",
-          "Risk explanation panel",
-        ],
-        deliverables: [
-          "Demo dataset",
-          "Map screenshots",
-          "Risk scoring explanation",
-        ],
-        notes: [
-          "Real-time crime data not mandatory",
-          "Risk factors must be defined",
-        ],
-      },
+
+    solutionExpectations: [
+      "Voice command recognition",
+      "SOS triggering through voice",
+      "Multilingual or regional language support",
+      "Emergency response workflows"
     ],
+
+    innovationScope: [
+      "Offline speech recognition",
+      "Embedded safety devices",
+      "Wearable assistants",
+      "AI conversational systems"
+    ],
+
+    technicalApproach: [
+      "Speech-to-text APIs or offline models",
+      "Mobile/web interface or embedded hardware",
+      "Integration with notification systems"
+    ],
+
+    expectedDeliverables: [
+      "Working prototype",
+      "Voice interaction demo",
+      "Architecture explanation",
+      "Demo scenario video"
+    ],
+
+    constraintsGuidelines: [
+      "Must include false-trigger handling",
+      "Offline or low-network solutions encouraged"
+    ]
   },
 
-  "women-personal-safety": {
+  "public-transport-safety-intelligence": {
     domainTitle: "Women's Safety & Social Security",
     image: womensafetyImg,
-    objective:
-      "Create intelligent systems to assist users during emergencies.",
-    additionalContent: [
-      "System should:",
-      "Allow quick SOS triggering. ",
-      "Alert users about potential cyber threats.",
-      "Share live location with trusted contacts. ",
+
+    problemTitle: "AI-Based Public Transport Safety Intelligence & Risk Monitoring System",
+
+    realWorldContext:
+      "Public transportation environments can pose safety challenges due to crowd dynamics, environmental conditions, and unpredictable incidents. Current safety systems lack predictive intelligence.",
+
+    challengeStatement:
+      "Build an intelligent system that monitors public transport environments, predicts potential safety risks, and provides alerts or recommendations to enhance passenger safety.",
+
+    targetUsers: [
+      "Daily commuters",
+      "Women travelers",
+      "Public transport authorities",
+      "Smart city planners"
     ],
-    problems: [
-      {
-        title: "Problem Statement : 3 - AI-Based Personal Safety Companion",
-        description:
-          "An AI-powered safety companion enabling SOS alerts, live location sharing, and contextual assistance.",
-        techStack: {
-          frontend: "Flutter / React Native / React",
-          backend: "Node.js / FastAPI",
-          services: "Google Maps API / Twilio",
-          database: "Firebase / PostgreSQL",
-        },
-        features: [
-          "One-click SOS",
-          "Trusted contacts",
-          "Live location sharing",
-          "Alert history",
-        ],
-        deliverables: [
-          "SOS workflow demo",
-          "Alert simulation proof",
-          "Architecture overview",
-        ],
-        notes: [
-          "False-alarm cancel feature mandatory",
-          "Live GPS simulation allowed",
-        ],
-      },
+
+    solutionExpectations: [
+      "Risk prediction based on contextual data",
+      "Monitoring dashboard",
+      "Real-time or simulated alerts",
+      "Visualization of safe vs risky conditions"
     ],
+
+    innovationScope: [
+      "Computer vision-based monitoring",
+      "IoT sensors",
+      "Wearable alert devices",
+      "AI prediction models"
+    ],
+
+    technicalApproach: [
+      "Map visualization platforms",
+      "AI/ML analytics",
+      "IoT simulation or hardware integration"
+    ],
+
+    expectedDeliverables: [
+      "Prototype system",
+      "Safety risk visualization",
+      "Demonstration scenario",
+      "GitHub repository"
+    ],
+
+    constraintsGuidelines: [
+      "Real CCTV integration is not required",
+      "Simulation-based data is acceptable"
+    ]
   },
 
-  "women-cyber-harassment": {
+  "smart-campus-safety-ecosystem": {
     domainTitle: "Women's Safety & Social Security",
     image: womensafetyImg,
-    additionalContent: [
 
-      "System should:",
-      "Analyze text conversations.",
-      "Detect harassment or abusive patterns. ",
-      "Provide moderation or reporting features. ",
+    problemTitle: "Integrated Smart Campus Safety & Emergency Response Ecosystem",
+
+    realWorldContext:
+      "Educational campuses require proactive safety infrastructure to manage emergencies, monitor environments, and provide rapid response mechanisms. Traditional security systems are reactive and fragmented.",
+
+    challengeStatement:
+      "Develop a unified smart safety platform for campuses that integrates monitoring, emergency response, and intelligent risk alerts.",
+
+    targetUsers: [
+      "Students and faculty",
+      "Campus security teams",
+      "Institutional administrators"
     ],
-    objective:
-      "Problem Statement : 4 - Detect and prevent cyber harassment using AI and NLP.",
-    problems: [
-      {
-        title: "Cyber Harassment Detection & Prevention Platform",
-        description:
-          "AI system that detects abusive communication and supports reporting workflows.",
-        techStack: {
-          frontend: "React / Next.js",
-          backend: "Python FastAPI",
-          ai: "Hugging Face NLP models",
-          database: "PostgreSQL",
-        },
-        features: [
-          "Text analysis interface",
-          "Toxicity classification",
-          "Reporting workflow",
-          "Admin moderation panel",
-        ],
-        deliverables: [
-          "Sample conversation dataset",
-          "Detection demo",
-          "Model explanation",
-        ],
-        notes: [
-          "Confidence score required",
-          "Privacy-focused design encouraged",
-        ],
-      },
+
+    solutionExpectations: [
+      "Emergency alert workflows",
+      "Smart monitoring dashboard",
+      "Zone-based safety tracking",
+      "Incident reporting interface"
     ],
+
+    innovationScope: [
+      "AI surveillance analytics",
+      "Smart SOS kiosks",
+      "Mobile safety apps",
+      "IoT-based safety sensors"
+    ],
+
+    technicalApproach: [
+      "Web/mobile frontend",
+      "AI analytics or rule-based models",
+      "Embedded hardware or IoT simulation"
+    ],
+
+    expectedDeliverables: [
+      "Functional prototype",
+      "Campus safety scenario demo",
+      "System architecture documentation"
+    ],
+
+    constraintsGuidelines: [
+      "Real hardware optional",
+      "Ethical and privacy considerations mandatory"
+    ]
   },
 
   /* ============================= */
   /* DOMAIN 2 — HEALTHCARE         */
   /* ============================= */
 
-  "disease-prediction": {
+  "lab-test-interpretation-assistant": {
     domainTitle: "Healthcare Technology",
     image: healthcareImg,
-    additionalContent: [
-      "System should:",
-      "Analyze structured health data. ",
-      "Generate risk classification (Low/Medium/High).",
-      "Provide preventive health recommendations and awareness guidance.",
+
+    problemTitle: "AI-Powered Laboratory Test Interpretation & Clinical Insight Assistant",
+
+    realWorldContext:
+      "Patients and even junior healthcare professionals often struggle to interpret laboratory reports due to complex medical terminology and reference ranges. Misunderstanding lab results can lead to anxiety, delayed medical action, or improper self-assessment.",
+
+    challengeStatement:
+      "Design an intelligent system that analyzes laboratory test results and provides simplified explanations, risk insights, and contextual educational information to support patient understanding and clinical decision awareness.",
+
+    targetUsers: [
+      "Patients and caregivers",
+      "Medical students and junior clinicians",
+      "Telemedicine platforms",
+      "Health awareness applications"
     ],
-    objective:
-      "Improve preventive healthcare through AI-based early disease risk prediction.",
-    problems: [
-      {
-        title: "Problem Statement : 1 - AI-Based Early Disease Risk Prediction System",
-        description:
-          "Predict disease risks based on lifestyle, symptoms, and medical indicators.",
-        techStack: {
-          frontend: "React / Next.js / Flutter",
-          backend: "Python FastAPI / Node.js",
-          ai: "scikit-learn",
-          database: "PostgreSQL / Firebase",
-        },
-        features: [
-          "Health data input form",
-          "Risk classification (Low/Medium/High)",
-          "Risk explanation",
-          "Preventive recommendations",
-        ],
-        deliverables: [
-          "Sample dataset",
-          "Prediction demo",
-          "Model explanation",
-        ],
-        notes: [
-          "Not a medical diagnosis disclaimer required",
-          "Avoid black-box predictions",
-        ],
-      },
+
+    solutionExpectations: [
+      "Input interface for lab values",
+      "An interpretation engine with explanation logic",
+      "Risk-level visualization (informational only)",
+      "User-friendly health insights dashboard"
     ],
+
+    innovationScope: [
+      "AI-driven medical explanation engine",
+      "NLP-based health guidance",
+      "Voice-based explanation interface",
+      "Integration with wearable or health tracking apps"
+    ],
+
+    technicalApproach: [
+      "Web/mobile application",
+      "Rule-based + AI model interpretation",
+      "Medical dataset mapping",
+      "Visualization tools"
+    ],
+
+    expectedDeliverables: [
+      "Functional prototype",
+      "Sample lab dataset demonstration",
+      "Interpretation logic explanation",
+      "GitHub repository",
+      "Demo video"
+    ],
+
+    constraintsGuidelines: [
+      'Must include disclaimer: "Not a medical diagnosis."',
+      "Explainable outputs required",
+      "Avoid black-box decisions"
+    ]
   },
 
-  "emergency-response": {
+  "mental-health-early-warning-system": {
     domainTitle: "Healthcare Technology",
     image: healthcareImg,
-    additionalContent: [
-      "System should:",
-      "Simulate emergency request handling. ",
-      "Identify nearest resources.",
-      "Provide optimized routing suggestions.",
+
+    problemTitle: "AI-Driven Mental Health Early Warning & Wellbeing Monitoring System",
+
+    realWorldContext:
+      "Mental health challenges such as stress, anxiety, and burnout are increasing globally. Early detection mechanisms are limited, and individuals often seek support only after symptoms escalate.",
+
+    challengeStatement:
+      "Develop an intelligent system capable of identifying early warning signals of mental health risks using behavioral, conversational, or activity-based indicators while promoting awareness and preventive support.",
+
+    targetUsers: [
+      "Students and professionals",
+      "Mental health awareness platforms",
+      "Counselors and wellness programs"
     ],
-    objective:
-      "Optimize emergency response coordination using digital platforms.",
-    problems: [
-      {
-        title: "Problem Statement : 2 - Smart Emergency Response Coordination Platform",
-        description:
-          "Match emergency requests with nearby hospitals and ambulances.",
-        techStack: {
-          frontend: "React + Map Visualization",
-          backend: "Node.js / FastAPI",
-          optimization: "Routing algorithms",
-          database: "PostgreSQL",
-        },
-        features: [
-          "Emergency request simulation",
-          "Nearby resource detection",
-          "Route visualization",
-          "Incident tracking",
-        ],
-        deliverables: [
-          "Demo dataset",
-          "Map-based UI demo",
-          "Optimization explanation",
-        ],
-        notes: [
-          "Real GPS integration optional",
-          "Simulation allowed",
-        ],
-      },
+
+    solutionExpectations: [
+      "Behavioral or conversational data analysis",
+      "Risk trend visualization",
+      "Wellness recommendation engine",
+      "User privacy-focused design"
     ],
-  },
-  "sleep-health-monitoring": {
-    domainTitle: "Healthcare Technology",
-    image: healthcareImg,
-    objective:
-      "Improve physical and mental well-being through AI-driven sleep pattern analysis and personalized recommendations.",
-    additionalContent: [
-      "System should:",
-      "Track sleep duration and patterns.",
-      "Analyze trends.",
-      "Provide actionable suggestions.",
+
+    innovationScope: [
+      "NLP emotion analysis",
+      "Voice tone analysis",
+      "Wearable sensor integration",
+      "AI-driven wellness suggestions"
     ],
-    problems: [
-      {
-        title: "Problem Statement : 3 - AI-Based Sleep Health Monitoring & Recommendation System",
-        description:
-          "Analyze user sleep duration and patterns using time-series analytics and provide personalized, actionable recommendations to improve sleep quality.",
-        techStack: {
-          frontend: "React / Flutter",
-          backend: "Python FastAPI",
-          ai: "Time-series analysis, Rule-based recommendation system",
-          database: "Firebase / PostgreSQL",
-          visualization: "Sleep pattern charts",
-        },
-        features: [
-          "Sleep data input interface",
-          "Sleep duration & pattern tracking",
-          "Trend analysis dashboard",
-          "Personalized recommendation engine",
-          "Health tips section",
-          "Sleep visualization charts",
-        ],
-        deliverables: [
-          "Sample sleep dataset",
-          "Recommendation logic description",
-          "Dashboard screenshots",
-        ],
-        notes: [
-          "Wearable device integration optional",
-          "Health disclaimer required (Not a medical diagnosis)",
-        ],
-      },
+
+    technicalApproach: [
+      "AI/NLP sentiment models",
+      "Time-series behavioral analysis",
+      "Mobile or web interface",
+      "Edge processing for privacy (optional)"
     ],
+
+    expectedDeliverables: [
+      "Working prototype",
+      "Demo scenario showing risk detection",
+      "Explanation of AI logic",
+      "GitHub repository"
+    ],
+
+    constraintsGuidelines: [
+      "Ethical design mandatory",
+      "Privacy-first architecture required",
+      "Not a medical diagnostic tool"
+    ]
   },
 
-  "remote-patient-monitoring": {
+  "rural-healthcare-access-platform": {
     domainTitle: "Healthcare Technology",
     image: healthcareImg,
-    objective:
-      "Enable continuous remote health monitoring and early abnormality detection using simulated IoT-based patient vitals tracking.",
-    additionalContent: [
-      "Display patient health metrics.",
-      "Detect abnormal readings. ",
-      "Generate alerts.",
+
+    problemTitle: "Smart Rural Healthcare Access & Low-Bandwidth Telemedicine Platform",
+
+    realWorldContext:
+      "Rural populations often lack access to healthcare due to connectivity challenges, resource shortages, and infrastructure limitations. Digital health systems must function in low-bandwidth environments.",
+
+    challengeStatement:
+      "Build a platform that improves rural healthcare accessibility by enabling remote consultation, symptom triage, and health resource discovery using lightweight and offline-capable solutions.",
+
+    targetUsers: [
+      "Rural patients",
+      "Community health workers",
+      "Primary healthcare centers",
+      "NGOs and public health agencies"
     ],
-    problems: [
-      {
-        title: "Problem Statement : 4 - Remote Patient Monitoring Dashboard (IoT Simulation Allowed)",
-        description:
-          "Develop a real-time dashboard that monitors patient vitals, detects abnormal patterns, and generates alerts for healthcare providers.",
-        techStack: {
-          frontend: "React Dashboard",
-          backend: "Node.js / Python FastAPI",
-          iot: "MQTT / Dummy data generator",
-          database: "InfluxDB / TimescaleDB / PostgreSQL",
-          visualization: "Real-time charts",
-        },
-        features: [
-          "Real-time or simulated vital signs dashboard",
-          "Abnormal value detection system",
-          "Automated alert generation",
-          "Patient history visualization",
-          "Role-based access (Doctor/Patient optional)",
-        ],
-        deliverables: [
-          "Simulated data generator",
-          "Alert trigger demonstration",
-          "Dashboard demo",
-        ],
-        notes: [
-          "Real hardware integration not required",
-          "Must demonstrate abnormal scenario detection",
-        ],
-      },
+
+    solutionExpectations: [
+      "Offline-first design",
+      "Symptom-based triage module",
+      "Telemedicine or consultation workflow",
+      "Local health resource mapping"
     ],
+
+    innovationScope: [
+      "Edge computing solutions",
+      "SMS/voice-based systems",
+      "Portable health kiosk prototypes",
+      "AI symptom classification"
+    ],
+
+    technicalApproach: [
+      "Progressive Web Apps (PWA)",
+      "Lightweight backend architecture",
+      "Offline data synchronization",
+      "IoT health devices (optional)"
+    ],
+
+    expectedDeliverables: [
+      "Functional prototype",
+      "Demonstration using a simulated rural scenario",
+      "Architecture diagram",
+      "GitHub repository"
+    ],
+
+    constraintsGuidelines: [
+      "Must work in low-connectivity conditions (simulation acceptable)",
+      "Privacy and data protection considerations required"
+    ]
   },
 
+  "medication-adherence-tracker": {
+    domainTitle: "Healthcare Technology",
+    image: healthcareImg,
+
+    problemTitle: "AI-Enabled Medication Adherence Monitoring & Reminder System",
+
+    realWorldContext:
+      "Medication non-adherence is a major global healthcare issue leading to ineffective treatment outcomes and increased healthcare costs. Patients often forget dosage schedules or misunderstand prescriptions.",
+
+    challengeStatement:
+      "Develop an intelligent system that helps patients track medication schedules, provides reminders, and detects adherence patterns to improve treatment consistency.",
+
+    targetUsers: [
+      "Chronic disease patients",
+      "Elderly individuals",
+      "Caregivers and families",
+      "Healthcare providers"
+    ],
+
+    solutionExpectations: [
+      "Medication scheduling interface",
+      "Smart reminder system",
+      "Adherence tracking dashboard",
+      "Alert mechanism for missed doses"
+    ],
+
+    innovationScope: [
+      "Smart pillbox hardware integration",
+      "Voice reminders",
+      "AI adherence pattern prediction",
+      "Wearable integration"
+    ],
+
+    technicalApproach: [
+      "Mobile/web application",
+      "Notification systems",
+      "AI pattern analysis (optional)",
+      "IoT sensor integration"
+    ],
+
+    expectedDeliverables: [
+      "Functional prototype",
+      "Adherence workflow demonstration",
+      "System architecture",
+      "GitHub repository"
+    ],
+
+    constraintsGuidelines: [
+      "Real medical integration is not required",
+      "Must include clear user safety messaging"
+    ]
+  },
 
   /* ============================= */
   /* DOMAIN 3 — SUSTAINABLE ENV    */
   /* ============================= */
 
-  "food-waste-management": {
+  "food-waste-reduction-redistribution": {
     domainTitle: "Sustainable Environment & Green Technology",
     image: sustainableImg,
-    objective:
-      "Reduce food waste and improve redistribution using AI.",
-    additionalContent: [
-      "System should:",
-      "Predict potential surplus food generation.",
-      "Optimize redistribution logistics. ",
-      "Minimize food waste and delivery delays. ",
+
+    problemTitle: "AI-Driven Food Waste Reduction & Intelligent Redistribution Platform",
+
+    realWorldContext:
+      "Food wastage contributes significantly to environmental pollution and resource inefficiency, while many communities face food insecurity. Efficient redistribution of surplus food remains a logistical and predictive challenge.",
+
+    challengeStatement:
+      "Design and develop an intelligent platform that identifies surplus food sources, predicts potential food waste, and optimizes redistribution to beneficiaries such as NGOs, shelters, or communities.",
+
+    targetUsers: [
+      "Restaurants and event organizers",
+      "Educational institutions and hostels",
+      "NGOs and food redistribution networks",
+      "Sustainability-focused organizations"
     ],
-    problems: [
-      {
-        title: "Problem Statement : 1 - AI-Powered Food Waste Reduction & Redistribution",
-        description:
-          "Predict surplus food and optimize redistribution to NGOs.",
-        techStack: {
-          frontend: "React / Next.js / Flutter",
-          backend: "Node.js / FastAPI",
-          ai: "Machine Learning / Rule-based forecasting",
-          database: "PostgreSQL / Firebase",
-          maps: "Google Maps API / Mapbox",
-        },
-        features: [
-          "Food donor registration",
-          "NGO matching system",
-          "Surplus prediction",
-          "Pickup route suggestion",
-          "Admin dashboard",
-        ],
-        deliverables: [
-          "GitHub repository",
-          "Demo workflow",
-          "Sample dataset",
-          "Short demo video",
-        ],
-        notes: [
-          "Simulation allowed",
-          "Show environmental impact metrics",
-        ],
-      },
+
+    solutionExpectations: [
+      "Food donor registration interface",
+      "Surplus prediction or detection module",
+      "Matching system between donors and receivers",
+      "Logistics visualization or route suggestion"
     ],
-  },
-  "smart-energy-optimization": {
-    domainTitle: "Sustainable Environment & Green Technology",
-    image: sustainableImg,
-    objective:
-      "Reduce energy inefficiency and environmental impact using AI-driven consumption monitoring and optimization strategies.",
-    additionalContent: [
-      "System should:",
-      "Visualize energy consumption.",
-      "Identify inefficient patterns. ",
-      "Identify inefficient patterns. ",
+
+    innovationScope: [
+      "AI prediction models for food surplus",
+      "Smart packaging or freshness sensors (hardware option)",
+      "Real-time inventory monitoring",
+      "Environmental impact analytics"
     ],
-    problems: [
-      {
-        title: "Problem Statement : 2 - Smart Energy Efficiency & Consumption Optimization Platform",
-        description:
-          "Monitor energy usage patterns, detect inefficiencies, and provide AI or rule-based recommendations to optimize consumption and reduce operational costs.",
-        techStack: {
-          frontend: "React Dashboard (Chart.js / Recharts)",
-          backend: "Node.js / FastAPI",
-          analytics: "Python (pandas, ML optional)",
-          database: "PostgreSQL / TimescaleDB",
-        },
-        features: [
-          "Energy usage dashboard",
-          "Consumption visualization charts",
-          "Peak consumption detection",
-          "Inefficient usage pattern identification",
-          "AI or rule-based recommendation engine",
-          "Savings estimation feature",
-          "Before/After comparison scenario",
-        ],
-        deliverables: [
-          "Sample energy dataset",
-          "Visualization screenshots",
-          "Recommendation logic explanation",
-        ],
-        notes: [
-          "IoT integration optional (simulation acceptable)",
-          "Must demonstrate before/after optimization comparison",
-        ],
-      },
+
+    technicalApproach: [
+      "Web/mobile platform",
+      "AI/ML forecasting or rule-based systems",
+      "Map-based logistics visualization",
+      "Cloud or edge deployment"
     ],
+
+    expectedDeliverables: [
+      "Working prototype",
+      "Redistribution workflow demonstration",
+      "Sample dataset and prediction logic",
+      "GitHub repository",
+      "Demo video"
+    ],
+
+    constraintsGuidelines: [
+      "Real logistics integration not required (simulation acceptable)",
+      "Must include environmental impact indicators"
+    ]
   },
 
-  "smart-building-sustainability": {
+  "water-usage-optimization-platform": {
     domainTitle: "Sustainable Environment & Green Technology",
     image: sustainableImg,
-    objective:
-      "Promote sustainable infrastructure by monitoring resource consumption and generating sustainability performance scores.",
-    additionalContent: [
-      "System should:",
-      "Monitor resource metrics.",
-      "Calculate the sustainability score.",
-      "Provide improvement suggestions.",
+
+    problemTitle: "AI-Based Water Consumption Monitoring & Optimization System",
+
+    realWorldContext:
+      "Water scarcity and inefficient usage patterns create major environmental challenges. Monitoring consumption and providing actionable insights can significantly reduce wastage and improve sustainability.",
+
+    challengeStatement:
+      "Develop a system that monitors water usage patterns, identifies inefficiencies, and provides intelligent recommendations to optimize water consumption.",
+
+    targetUsers: [
+      "Residential communities",
+      "Industrial facilities",
+      "Smart building operators",
+      "Agricultural users"
     ],
-    problems: [
-      {
-        title: "Problem Statement : 3 - Smart Building Sustainability Monitoring System",
-        description:
-          "Monitor energy, water, and waste metrics to calculate a sustainability score and provide actionable improvement suggestions.",
-        techStack: {
-          frontend: "React / Angular Dashboard",
-          database: "PostgreSQL",
-          backend: "Node.js / Python FastAPI",
-          ai: "Pattern analysis / Scoring algorithms (optional)",
-        },
-        features: [
-          "Multi-resource monitoring (energy & water minimum)",
-          "Sustainability scoring system",
-          "Dashboard with sustainability insights",
-          "Historical trend visualization",
-          "Improvement recommendation suggestions",
-        ],
-        deliverables: [
-          "Mock building dataset",
-          "Sustainability scoring explanation",
-          "Dashboard demo",
-        ],
-        notes: [
-          "Real sensor integration optional",
-          "Transparency in scoring logic is required",
-        ],
-      },
+
+    solutionExpectations: [
+      "Water usage visualization dashboard",
+      "Inefficiency detection",
+      "Recommendation engine for optimization",
+      "Usage trend analysis"
     ],
+
+    innovationScope: [
+      "IoT water flow sensors",
+      "AI anomaly detection",
+      "Predictive consumption analytics",
+      "Gamification for conservation awareness"
+    ],
+
+    technicalApproach: [
+      "Real-time dashboards",
+      "Sensor data simulation or hardware integration",
+      "Data analytics using AI or statistical models"
+    ],
+
+    expectedDeliverables: [
+      "Prototype dashboard",
+      "Data visualization outputs",
+      "Optimization logic explanation",
+      "Demo scenario"
+    ],
+
+    constraintsGuidelines: [
+      "Real sensor deployment optional",
+      "Simulation data allowed"
+    ]
   },
 
-  "soil-health-advisor": {
+  "climate-risk-early-alert-system": {
     domainTitle: "Sustainable Environment & Green Technology",
     image: sustainableImg,
-    objective:
-      "Enhance sustainable agriculture through AI-based soil analysis and eco-friendly farming recommendations.",
-    additionalContent: [
-      "System should:",
-      "Analyze soil data inputs (pH, moisture, nutrients).",
-      "Suggest sustainable crop and fertilizer practices. ",
-      "Improve yield while minimizing environmental damage.",
+
+    problemTitle: "AI-Based Climate Risk Prediction & Early Alert Platform",
+
+    realWorldContext:
+      "Climate change has increased the frequency of extreme weather events such as floods, heatwaves, and storms. Early warning systems can improve preparedness and reduce environmental and human risks.",
+
+    challengeStatement:
+      "Design an intelligent system that analyzes environmental and historical data to predict climate-related risks and provide early alerts to communities or authorities.",
+
+    targetUsers: [
+      "Local communities",
+      "Disaster management agencies",
+      "Urban planners",
+      "Environmental monitoring organizations"
     ],
-    problems: [
-      {
-        title: "Problem Statement : 4 - AI-Based Soil Health & Sustainable Farming Advisor",
-        description:
-          "Analyze soil parameters such as pH, moisture, and nutrients to recommend sustainable crops and fertilizer practices while minimizing environmental damage.",
-        techStack: {
-          frontend: "React / Flutter",
-          backend: "Python FastAPI",
-          ai: "scikit-learn (ML recommendation engine) / Rule-based system",
-          database: "PostgreSQL",
-        },
-        features: [
-          "Soil parameter input form",
-          "Crop recommendation system",
-          "Fertilizer recommendation engine",
-          "Sustainability score / Eco-impact indicator",
-          "Farmer-friendly user interface",
-          "Explainable AI recommendations",
-        ],
-        deliverables: [
-          "Sample soil dataset",
-          "Recommendation explanation",
-          "Demo workflow",
-        ],
-        notes: [
-          "Use open agricultural datasets or mock data",
-          "Avoid black-box outputs (explain recommendations clearly)",
-        ],
-      },
+
+    solutionExpectations: [
+      "Climate risk prediction module",
+      "Alert generation system",
+      "Visualization of risk zones",
+      "Scenario-based simulation"
     ],
+
+    innovationScope: [
+      "Satellite or weather dataset analysis",
+      "Edge environmental sensors",
+      "AI predictive modeling",
+      "Smart notification systems"
+    ],
+
+    technicalApproach: [
+      "Data analytics and visualization tools",
+      "Machine learning or rule-based models",
+      "Mapping platforms for geographic visualization"
+    ],
+
+    expectedDeliverables: [
+      "Functional prototype",
+      "Risk prediction demonstration",
+      "Architecture overview",
+      "GitHub repository"
+    ],
+
+    constraintsGuidelines: [
+      "Real-time weather integration is optional",
+      "Use open datasets or simulated data"
+    ]
+  },
+
+  "soil-health-sustainable-farming-advisor": {
+    domainTitle: "Sustainable Environment & Green Technology",
+    image: sustainableImg,
+
+    problemTitle: "AI-Driven Soil Health Analysis & Sustainable Farming Advisory System",
+
+    realWorldContext:
+      "Soil degradation and inefficient farming practices impact crop productivity and environmental sustainability. Farmers require accessible tools that provide data-driven recommendations for eco-friendly agriculture.",
+
+    challengeStatement:
+      "Develop an intelligent advisory platform that analyzes soil parameters and recommends sustainable crop selection, fertilizer usage, and eco-friendly farming practices.",
+
+    targetUsers: [
+      "Farmers and agricultural communities",
+      "Agricultural advisors",
+      "Agri-tech startups",
+      "Sustainability researchers"
+    ],
+
+    solutionExpectations: [
+      "Soil data input interface",
+      "Crop/fertilizer recommendation engine",
+      "Sustainability scoring or eco-impact indicators",
+      "Farmer-friendly visualization"
+    ],
+
+    innovationScope: [
+      "IoT soil sensors",
+      "AI recommendation models",
+      "Offline mobile applications for rural use",
+      "Multilingual interfaces"
+    ],
+
+    technicalApproach: [
+      "Mobile or web platform",
+      "AI/ML or rule-based recommendation systems",
+      "Agricultural datasets integration"
+    ],
+
+    expectedDeliverables: [
+      "Prototype system",
+      "Recommendation workflow demonstration",
+      "Dataset explanation",
+      "GitHub repository"
+    ],
+
+    constraintsGuidelines: [
+      "Real hardware optional",
+      "Must explain recommendation logic clearly"
+    ]
   },
 
   /* ============================= */
   /* DOMAIN 4 — AI & AUTOMATION    */
   /* ============================= */
 
-  "resume-screening": {
+  "resume-screening-skill-matching-platform": {
     domainTitle: "AI & Automation",
     image: aiImg,
-    objective:
-      "Automate resume screening and skill matching using AI.",
-    additionalContent: [
-      "Detect phishing patterns using AI or rule-based analysis.",
-      "Alert users about potential cyber threats.",
-      "Provide educational guidance to improve cyber safety awareness.",
+
+    problemTitle: "AI-Powered Intelligent Resume Screening & Skill Matching Platform",
+
+    realWorldContext:
+      "Modern recruitment processes involve analyzing large volumes of resumes manually, which leads to inefficiencies, biases, and delays. Organizations require intelligent tools to match candidate skills with job roles accurately and fairly.",
+
+    challengeStatement:
+      "Design and develop an AI-driven platform capable of automatically analyzing resumes, extracting relevant skills and experience, and matching candidates with suitable job roles or learning pathways.",
+
+    targetUsers: [
+      "Recruiters and HR professionals",
+      "Job seekers and students",
+      "Educational institutions",
+      "Career development platforms"
     ],
-    problems: [
-      {
-        title: "Problem Statement : 1 - Intelligent Resume Screening & Skill Matching Platform",
-        description:
-          "Analyze resumes and match candidates with job roles using NLP.",
-        techStack: {
-          frontend: "React / Next.js",
-          backend: "Python FastAPI / Node.js",
-          ai: "spaCy / Hugging Face NLP",
-          database: "PostgreSQL / MongoDB",
-        },
-        features: [
-          "Resume upload",
-          "Skill extraction",
-          "Matching score",
-          "Candidate ranking",
-        ],
-        deliverables: [
-          "Sample resumes",
-          "Matching demo",
-          "Logic explanation",
-        ],
-        notes: [
-          "Bias mitigation required",
-          "Transparent matching logic",
-        ],
-      },
+
+    solutionExpectations: [
+      "Resume upload and parsing system",
+      "Skill extraction and classification engine",
+      "Job-role matching with scoring",
+      "Candidate ranking or recommendation interface"
     ],
-  },
-  "academic-integrity": {
-    domainTitle: "AI & Automation",
-    image: aiImg,
-    objective:
-      "Ensure academic integrity by detecting plagiarism, paraphrased content, and AI-generated submissions using advanced NLP techniques.",
-    additionalContent: [
-      "Detect phishing patterns using AI or rule-based analysis.",
-      "Alert users about potential cyber threats.",
-      "Provide educational guidance to improve cyber safety awareness.",
+
+    innovationScope: [
+      "NLP-based resume understanding",
+      "Skill ontology or knowledge graph",
+      "Bias-aware matching algorithms",
+      "AI-powered career recommendation systems"
     ],
-    problems: [
-      {
-        title: "Problem Statement : 2 - AI Academic Integrity & Plagiarism Detection System",
-        description:
-          "Develop an AI-powered platform that compares academic documents, detects paraphrased plagiarism, and provides similarity scoring with explainable results.",
-        techStack: {
-          frontend: "React / Next.js",
-          backend: "Python FastAPI",
-          ai: "Sentence Transformers, Embedding Similarity, Cosine Similarity",
-          database: "PostgreSQL",
-          optional: "Code similarity tools (for programming assignments)",
-        },
-        features: [
-          "Document upload interface",
-          "Similarity detection output",
-          "Paraphrased plagiarism detection",
-          "Highlighted matching sections",
-          "Confidence score display",
-          "Explainable similarity results",
-        ],
-        deliverables: [
-          "Sample academic documents",
-          "Similarity comparison demonstration",
-          "Model explanation",
-        ],
-        notes: [
-          "Must provide explainable results",
-          "Do not rely only on simple string matching",
-        ],
-      },
+
+    technicalApproach: [
+      "NLP frameworks (spaCy, transformers, etc.)",
+      "Web/mobile interface",
+      "Backend API with matching algorithms",
+      "Optional vector database or semantic search"
     ],
+
+    expectedDeliverables: [
+      "Functional prototype",
+      "Skill matching demonstration",
+      "Architecture diagram",
+      "GitHub repository",
+      "Demo video"
+    ],
+
+    constraintsGuidelines: [
+      "Transparency in the matching logic is required",
+      "Avoid unfair bias in recommendations"
+    ]
   },
 
-  "personalized-learning": {
+  "ai-code-quality-assistant": {
     domainTitle: "AI & Automation",
     image: aiImg,
-    objective:
-      "Enhance student learning outcomes through AI-driven personalized learning path recommendations.",
-    additionalContent: [
-      "Detect phishing patterns using AI or rule-based analysis.",
-      "Alert users about potential cyber threats.",
-      "Provide educational guidance to improve cyber safety awareness.",
+
+    problemTitle: "AI-Based Code Quality Analysis & Learning Assistant",
+
+    realWorldContext:
+      "Students often struggle with improving coding practices, debugging efficiently, and understanding best practices. Automated tools that provide real-time guidance can significantly enhance learning outcomes.",
+
+    challengeStatement:
+      "Develop an AI-powered assistant that analyzes source code and provides feedback on logic errors, performance issues, coding standards, and improvement suggestions.",
+
+    targetUsers: [
+      "Programming students",
+      "Coding bootcamps",
+      "Educational institutions",
+      "Self-learners"
     ],
-    problems: [
-      {
-        title: "Problem Statement : 3 - AI-Based Personalized Learning Path Generator",
-        description:
-          "Analyze student performance data to identify skill gaps and generate adaptive, personalized learning paths.",
-        techStack: {
-          frontend: "React / Flutter",
-          backend: "Python FastAPI",
-          ai: "Recommendation systems (Rule-based / ML models)",
-          database: "Firebase / PostgreSQL",
-        },
-        features: [
-          "Student profile creation",
-          "Skill assessment input",
-          "Skill gap identification",
-          "Personalized learning path generation",
-          "Progress tracking dashboard",
-          "Adaptive updates based on progress",
-        ],
-        deliverables: [
-          "Demo student dataset",
-          "Recommendation logic explanation",
-          "Learning path visualization",
-        ],
-        notes: [
-          "Must justify recommendation logic",
-          "Include adaptive updates when progress changes",
-        ],
-      },
+
+    solutionExpectations: [
+      "Code input or repository analysis",
+      "Static or dynamic code evaluation",
+      "AI-driven suggestions and explanations",
+      "Learning-focused feedback interface"
     ],
+
+    innovationScope: [
+      "AI code analysis models",
+      "Automated refactoring suggestions",
+      "Code visualization tools",
+      "Integration with IDE plugins"
+    ],
+
+    technicalApproach: [
+      "Static analysis tools",
+      "AI/LLM integration (optional)",
+      "Web-based coding environment or plugin"
+    ],
+
+    expectedDeliverables: [
+      "Working prototype",
+      "Code analysis demonstration",
+      "Sample evaluation reports",
+      "GitHub repository"
+    ],
+
+    constraintsGuidelines: [
+      "Educational focus encouraged",
+      "Avoid reliance on external paid APIs unless simulated"
+    ]
   },
 
-  "skill-intelligence-platform": {
+  "ai-meeting-intelligence-assistant": {
     domainTitle: "AI & Automation",
     image: aiImg,
-    objective:
-      "Bridge the gap between academic skills and industry demands using AI-powered skill intelligence and job role mapping.",
-    additionalContent: [
-      "Detect phishing patterns using AI or rule-based analysis.",
-      "Alert users about potential cyber threats.",
-      "Provide educational guidance to improve cyber safety awareness.",
+
+    problemTitle: "AI-Based Meeting Intelligence & Automated Insight Assistant",
+
+    realWorldContext:
+      "Meetings generate large amounts of information, but extracting actionable insights manually is time-consuming. Organizations require intelligent tools that summarize discussions and identify key decisions automatically.",
+
+    challengeStatement:
+      "Create an AI-powered system capable of capturing meeting conversations, generating summaries, extracting action items, and providing intelligent meeting analytics.",
+
+    targetUsers: [
+      "Corporate teams",
+      "Educational institutions",
+      "Project managers",
+      "Remote collaboration teams"
     ],
-    problems: [
-      {
-        title: "Problem Statement : 4 - AI Skill Intelligence Platform for Industry Readiness",
-        description:
-          "Analyze student skills or resumes, map them to industry job roles, identify skill gaps, and recommend targeted training pathways.",
-        techStack: {
-          frontend: "React / Next.js",
-          backend: "Python FastAPI",
-          ai: "NLP Skill Extraction, Recommendation Engine",
-          database: "PostgreSQL",
-          optional: "Knowledge Graph (Advanced teams)",
-        },
-        features: [
-          "Skill input or resume upload",
-          "Job role mapping engine",
-          "Skill gap analysis",
-          "Training and certification recommendations",
-          "Industry skill taxonomy integration",
-        ],
-        deliverables: [
-          "Sample job role dataset",
-          "Skill matching demonstration",
-          "AI recommendation explanation",
-        ],
-        notes: [
-          "Must include industry skill taxonomy",
-          "Explain matching criteria clearly",
-        ],
-      },
+
+    solutionExpectations: [
+      "Speech-to-text or text input processing",
+      "Automated meeting summary generation",
+      "Action item extraction",
+      "Meeting analytics dashboard"
     ],
+
+    innovationScope: [
+      "Voice recognition systems",
+      "AI summarization models",
+      "Smart calendar integration",
+      "Hardware-based meeting recording devices"
+    ],
+
+    technicalApproach: [
+      "NLP models for summarization",
+      "Audio processing or transcript analysis",
+      "Web/mobile interface"
+    ],
+
+    expectedDeliverables: [
+      "Functional prototype",
+      "Meeting summary demonstration",
+      "Architecture overview",
+      "GitHub repository"
+    ],
+
+    constraintsGuidelines: [
+      "Real-time audio processing optional",
+      "Privacy and data protection considerations required"
+    ]
   },
 
+  "no-code-workflow-automation-builder": {
+    domainTitle: "AI & Automation",
+    image: aiImg,
+
+    problemTitle: "AI-Driven Autonomous Workflow Automation Builder (No-Code Platform)",
+
+    realWorldContext:
+      "Automation tools often require technical expertise, limiting accessibility for non-programmers. No-code automation platforms can empower users to design workflows visually and automate repetitive tasks.",
+
+    challengeStatement:
+      "Design a no-code platform that enables users to build automated workflows through visual interfaces and AI-driven suggestions without writing code.",
+
+    targetUsers: [
+      "Business users",
+      "Students and educators",
+      "Startups and small organizations",
+      "Productivity-focused professionals"
+    ],
+
+    solutionExpectations: [
+      "Drag-and-drop workflow builder",
+      "Trigger-action automation system",
+      "AI-assisted workflow suggestions",
+      "Workflow execution monitoring"
+    ],
+
+    innovationScope: [
+      "Visual automation interfaces",
+      "Natural language workflow creation",
+      "AI agent-based automation",
+      "Integration with external services (simulation allowed)"
+    ],
+
+    technicalApproach: [
+      "Web-based builder interface",
+      "Backend workflow engine",
+      "AI/NLP for automation suggestions"
+    ],
+
+    expectedDeliverables: [
+      "Functional no-code platform prototype",
+      "Automation workflow demonstration",
+      "Architecture documentation",
+      "GitHub repository"
+    ],
+
+    constraintsGuidelines: [
+      "External API integrations optional",
+      "Must demonstrate at least one end-to-end automation scenario"
+    ]
+  }
 };
 
 export default function Domain() {
   const imageRef = useRef(null);
   const rowRef = useRef(null);
+
   const [offsetY, setOffsetY] = useState(0);
+  const [expandedSections, setExpandedSections] = useState({});
+
+  const { domainId } = useParams();
+  const domain = domainData[domainId];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -715,9 +889,8 @@ export default function Domain() {
       const imageHeight = imageRef.current.offsetHeight;
 
       const scrollY = window.scrollY;
-      const offsetTop = 120; // distance from navbar
+      const offsetTop = 120;
 
-      // start moving when row enters viewport
       if (scrollY > rowTop - offsetTop) {
         const maxMove = rowHeight - imageHeight - offsetTop;
 
@@ -734,10 +907,6 @@ export default function Domain() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const { domainId } = useParams();
-  const domain = domainData[domainId];
-  const [expandedSections, setExpandedSections] = useState({});
-
   if (!domain) {
     return (
       <h2 style={{ color: "#fff", textAlign: "center", marginTop: "120px" }}>
@@ -746,16 +915,16 @@ export default function Domain() {
     );
   }
 
-  const toggleSection = (index, section) => {
-    const key = `${index}-${section}`;
+  const toggleSection = (section) => {
     setExpandedSections((prev) => ({
       ...prev,
-      [key]: !prev[key],
+      [section]: !prev[section]
     }));
   };
 
   return (
     <section className="domain-section">
+      {/* HEADER */}
       <motion.div
         className="domain-header"
         initial={{ opacity: 0, y: 40 }}
@@ -763,126 +932,184 @@ export default function Domain() {
         transition={{ duration: 0.6 }}
       >
         <h2>{domain.domainTitle}</h2>
-        <p>{domain.objective}</p>
+        <p>{domain.problemTitle}</p>
       </motion.div>
 
-      {domain.problems.map((problem, index) => (
-        <motion.div
-          ref={rowRef}
-          key={index}
-          className="domain-row"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.2 }}
-        >
-          {/* LEFT — CONTENT CARD */}
-          <div className="domain-problem">
-            <h3>{problem.title}</h3>
-            <p>{problem.description}</p>
-            {/*             
-        <p>{domain.additionalContent}</p> */}
-            {(problem.additionalContent || domain.additionalContent) && (
-              <ul className="problem-extra">
-                {(problem.additionalContent || domain.additionalContent).map((point, i) => (
-                  <li key={i}> {point}</li>
+      <motion.div
+        ref={rowRef}
+        className="domain-row"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        {/* LEFT CONTENT */}
+        <div className="domain-problem">
+          <h3>REAL-WORLD CONTEXT</h3>
+          <p>{domain.realWorldContext}</p>
+
+          <h3>CHALLENGE STATEMENT</h3>
+          <p>{domain.challengeStatement}</p>
+
+          {/* TARGET USERS */}
+          <div className="dropdown-section">
+            <button
+              className="dropdown-toggle"
+              onClick={() => toggleSection("targetUsers")}
+            >
+              <span
+                className={`dropdown-icon ${
+                  expandedSections.targetUsers ? "open" : ""
+                }`}
+              >
+                ▶
+              </span>
+              TARGET USERS
+            </button>
+
+            {expandedSections.targetUsers && (
+              <ul className="dropdown-content">
+                {domain.targetUsers.map((u, i) => (
+                  <li key={i}>{u}</li>
                 ))}
               </ul>
             )}
-
-
-            {/* TECH STACK DROPDOWN */}
-            <div className="dropdown-section">
-              <button
-                className="dropdown-toggle"
-                onClick={() => toggleSection(index, "techStack")}
-              >
-                <span className={`dropdown-icon ${expandedSections[`${index}-techStack`] ? "open" : ""}`}>
-                  ▶
-                </span>
-                Recommended Tech Stack
-              </button>
-              {expandedSections[`${index}-techStack`] && (
-                <ul className="dropdown-content">
-                  {Object.values(problem.techStack).map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
-
-            {/* FEATURES DROPDOWN */}
-            <div className="dropdown-section">
-              <button
-                className="dropdown-toggle"
-                onClick={() => toggleSection(index, "features")}
-              >
-                <span className={`dropdown-icon ${expandedSections[`${index}-features`] ? "open" : ""}`}>
-                  ▶
-                </span>
-                Mandatory Features
-              </button>
-              {expandedSections[`${index}-features`] && (
-                <ul className="dropdown-content">
-                  {problem.features.map((f, i) => (
-                    <li key={i}>{f}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
-
-            {/* DELIVERABLES DROPDOWN */}
-            <div className="dropdown-section">
-              <button
-                className="dropdown-toggle"
-                onClick={() => toggleSection(index, "deliverables")}
-              >
-                <span className={`dropdown-icon ${expandedSections[`${index}-deliverables`] ? "open" : ""}`}>
-                  ▶
-                </span>
-                Deliverables
-              </button>
-              {expandedSections[`${index}-deliverables`] && (
-                <ul className="dropdown-content">
-                  {problem.deliverables.map((d, i) => (
-                    <li key={i}>{d}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
-
-            {/* INSTRUCTIONS DROPDOWN */}
-            <div className="dropdown-section">
-              <button
-                className="dropdown-toggle"
-                onClick={() => toggleSection(index, "notes")}
-              >
-                <span className={`dropdown-icon ${expandedSections[`${index}-notes`] ? "open" : ""}`}>
-                  ▶
-                </span>
-                Special Instructions
-              </button>
-              {expandedSections[`${index}-notes`] && (
-                <ul className="dropdown-content">
-                  {problem.notes.map((n, i) => (
-                    <li key={i}>{n}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
           </div>
 
-          {/* RIGHT — FLOATING IMAGE */}
-          <div
-            className="domain-side-image"
-            ref={imageRef}
-            style={{ transform: `translateY(${offsetY}px)` }}
-          >
-            <img src={domain.image} alt="Domain Visual" />
+          {/* SOLUTION EXPECTATIONS */}
+          <div className="dropdown-section">
+            <button
+              className="dropdown-toggle"
+              onClick={() => toggleSection("solutionExpectations")}
+            >
+              <span
+                className={`dropdown-icon ${
+                  expandedSections.solutionExpectations ? "open" : ""
+                }`}
+              >
+                ▶
+              </span>
+              SOLUTION EXPECTATIONS
+            </button>
+
+            {expandedSections.solutionExpectations && (
+              <ul className="dropdown-content">
+                {domain.solutionExpectations.map((s, i) => (
+                  <li key={i}>{s}</li>
+                ))}
+              </ul>
+            )}
           </div>
 
-        </motion.div>
-      ))}
+          {/* INNOVATION SCOPE */}
+          <div className="dropdown-section">
+            <button
+              className="dropdown-toggle"
+              onClick={() => toggleSection("innovationScope")}
+            >
+              <span
+                className={`dropdown-icon ${
+                  expandedSections.innovationScope ? "open" : ""
+                }`}
+              >
+                ▶
+              </span>
+              INNOVATION SCOPE
+            </button>
 
+            {expandedSections.innovationScope && (
+              <ul className="dropdown-content">
+                {domain.innovationScope.map((s, i) => (
+                  <li key={i}>{s}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {/* TECHNICAL APPROACH */}
+          <div className="dropdown-section">
+            <button
+              className="dropdown-toggle"
+              onClick={() => toggleSection("technicalApproach")}
+            >
+              <span
+                className={`dropdown-icon ${
+                  expandedSections.technicalApproach ? "open" : ""
+                }`}
+              >
+                ▶
+              </span>
+              TECHNICAL APPROACH
+            </button>
+
+            {expandedSections.technicalApproach && (
+              <ul className="dropdown-content">
+                {domain.technicalApproach.map((t, i) => (
+                  <li key={i}>{t}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {/* EXPECTED DELIVERABLES */}
+          <div className="dropdown-section">
+            <button
+              className="dropdown-toggle"
+              onClick={() => toggleSection("expectedDeliverables")}
+            >
+              <span
+                className={`dropdown-icon ${
+                  expandedSections.expectedDeliverables ? "open" : ""
+                }`}
+              >
+                ▶
+              </span>
+              EXPECTED DELIVERABLES
+            </button>
+
+            {expandedSections.expectedDeliverables && (
+              <ul className="dropdown-content">
+                {domain.expectedDeliverables.map((d, i) => (
+                  <li key={i}>{d}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {/* CONSTRAINTS & GUIDELINES */}
+          <div className="dropdown-section">
+            <button
+              className="dropdown-toggle"
+              onClick={() => toggleSection("constraintsGuidelines")}
+            >
+              <span
+                className={`dropdown-icon ${
+                  expandedSections.constraintsGuidelines ? "open" : ""
+                }`}
+              >
+                ▶
+              </span>
+              CONSTRAINTS & GUIDELINES
+            </button>
+
+            {expandedSections.constraintsGuidelines && (
+              <ul className="dropdown-content">
+                {domain.constraintsGuidelines.map((c, i) => (
+                  <li key={i}>{c}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+
+        {/* RIGHT IMAGE */}
+        <div
+          className="domain-side-image"
+          ref={imageRef}
+          style={{ transform: `translateY(${offsetY}px)` }}
+        >
+          <img src={domain.image} alt="Domain Visual" />
+        </div>
+      </motion.div>
     </section>
   );
 }

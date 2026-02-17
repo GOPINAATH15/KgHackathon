@@ -15,82 +15,85 @@ export default function Navbar() {
       sub: [
         {
           label: "Cyber Safety Awareness & Phishing Detection Platform",
-          path: "/domains/women-cyber-safety",
+          path: "/domains/cyber-safety-phishing-detection",
         },
         {
           label: "Voice-Based Safety Assistant",
-          path: "/domains/women-night-safety",
+          path: "/domains/voice-based-safety-assistant",
         },
         {
           label: "AI-Powered Public Transport Safety Intelligence System",
-          path: "/domains/women-personal-safety",
+          path: "/domains/public-transport-safety-intelligence",
         },
         {
           label: "Smart Campus Safety Ecosystem",
-          path: "/domains/women-cyber-harassment",
+          path: "/domains/smart-campus-safety-ecosystem",
         },
       ],
     },
+
     {
       title: "Healthcare Technology",
       sub: [
         {
           label: "AI-Based Laboratory Test Interpretation Assistant",
-          path: "/domains/disease-prediction",
+          path: "/domains/lab-test-interpretation-assistant",
         },
         {
           label: "AI-Based Mental Health Early Warning System",
-          path: "/domains/emergency-response",
+          path: "/domains/mental-health-early-warning-system",
         },
         {
           label: "Smart Rural Healthcare Access Platform",
-          path: "/domains/sleep-health-monitoring",
+          path: "/domains/rural-healthcare-access-platform",
         },
         {
           label: "AI-Based Medication Adherence Tracker",
-          path: "/domains/remote-patient-monitoring",
+          path: "/domains/medication-adherence-tracker",
         },
       ],
     },
+
     {
       title: "Sustainable Environment & Green Technology",
       sub: [
         {
           label: "AI-Powered Food Waste Reduction & Redistribution",
-          path: "/domains/food-waste-management",
+          path: "/domains/food-waste-reduction-redistribution",
         },
         {
           label: "AI-Based Water Usage Optimization Platform",
-          path: "/domains/smart-energy-optimization",
+          path: "/domains/water-usage-optimization-platform",
         },
         {
           label: "Climate Risk Early Alert System",
-          path: "/domains/smart-building-sustainability",
+          path: "/domains/climate-risk-early-alert-system",
         },
         {
           label: "AI-Based Soil Health & Sustainable Farming Advisor",
-          path: "/domains/soil-health-advisor",
+          path: "/domains/soil-health-sustainable-farming-advisor",
         },
       ],
     },
+
     {
       title: "AI & Automation",
       sub: [
         {
           label: "Intelligent Resume Screening & Skill Matching Platform",
-          path: "/domains/resume-screening",
+          path: "/domains/resume-screening-skill-matching-platform",
         },
         {
           label: "AI Code Quality Assistant for Students",
-          path: "/domains/academic-integrity",
+          path: "/domains/ai-code-quality-assistant",
         },
         {
           label: "AI Meeting Intelligence Assistant",
-          path: "/domains/personalized-learning",
+          path: "/domains/ai-meeting-intelligence-assistant",
         },
         {
           label: "Autonomous Workflow Automation Builder (No-Code AI)",
-          path: "/domains/skill-intelligence-platform",
+          path: "/domains/no-code-workflow-automation-builder",
         },
       ],
     },
@@ -104,15 +107,7 @@ export default function Navbar() {
       transition={{ duration: 0.7 }}
     >
       <Link to="/" className="kg-logo-wrapper">
-      
-         {/* <img
-          src="/Kg-logo.png"
-          alt="College Logo"
-          className="kg-college-logo"
-        /> */}
-
-     
-       
+        {/* Logo here */}
       </Link>
 
       <div
@@ -125,12 +120,27 @@ export default function Navbar() {
       </div>
 
       <div className={`kg-nav-links ${mobileOpen ? "active" : ""}`}>
-        <Link to="/" onClick={() => setMobileOpen(false)}>Home</Link>
-        <Link to="/about" onClick={() => setMobileOpen(false)}>About</Link>
-        <Link to="/phases" onClick={() => setMobileOpen(false)}>Journey</Link>
-        <Link to="/schedule" onClick={() => setMobileOpen(false)}>Schedule</Link>
-        <Link to="/rules" onClick={() => setMobileOpen(false)}>Rules</Link>
+        <Link to="/" onClick={() => setMobileOpen(false)}>
+          Home
+        </Link>
 
+        <Link to="/about" onClick={() => setMobileOpen(false)}>
+          About
+        </Link>
+
+        <Link to="/phases" onClick={() => setMobileOpen(false)}>
+          Journey
+        </Link>
+
+        <Link to="/schedule" onClick={() => setMobileOpen(false)}>
+          Schedule
+        </Link>
+
+        <Link to="/rules" onClick={() => setMobileOpen(false)}>
+          Rules
+        </Link>
+
+        {/* DOMAIN DROPDOWN */}
         <div
           className="kg-nav-dropdown"
           onMouseEnter={() => {
@@ -160,7 +170,11 @@ export default function Navbar() {
           </span>
 
           {domainOpen && (
-            <div className={`kg-dropdown-menu ${window.innerWidth <= 768 ? "kg-mobile-dropdown" : ""}`}>
+            <div
+              className={`kg-dropdown-menu ${
+                window.innerWidth <= 768 ? "kg-mobile-dropdown" : ""
+              }`}
+            >
               {domains.map((item, index) => (
                 <div
                   key={index}
@@ -181,12 +195,13 @@ export default function Navbar() {
                     <span className="kg-arrow">›</span>
                   </div>
 
-                  {(activeIndex === index ||
-                    window.innerWidth <= 768) &&
+                  {(activeIndex === index || window.innerWidth <= 768) &&
                     activeIndex === index && (
-                      <div className={`kg-sub-dropdown ${window.innerWidth <= 768 ? "kg-mobile-sub" : ""}`}>
-
-                        {/* 🔥 NEW HEADING (NO LOGIC CHANGED) */}
+                      <div
+                        className={`kg-sub-dropdown ${
+                          window.innerWidth <= 768 ? "kg-mobile-sub" : ""
+                        }`}
+                      >
                         <div className="kg-problem-heading">
                           Problem Statement
                         </div>
@@ -213,7 +228,9 @@ export default function Navbar() {
           )}
         </div>
 
-        <Link to="/faq" onClick={() => setMobileOpen(false)}>FAQ</Link>
+        <Link to="/faq" onClick={() => setMobileOpen(false)}>
+          FAQ
+        </Link>
 
         <Link
           to="/register"

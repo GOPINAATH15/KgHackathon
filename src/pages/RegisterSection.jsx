@@ -9,10 +9,17 @@ export default function RegisterSection() {
 
   const sectionRef = useRef(null);
   const boxRef = useRef(null);
+
   const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      // ✅ Disable sticky in mobile/tablet view
+      if (window.innerWidth <= 1024) {
+        setIsFixed(false);
+        return;
+      }
+
       if (!sectionRef.current || !boxRef.current) return;
 
       const sectionTop = sectionRef.current.offsetTop;
@@ -20,7 +27,7 @@ export default function RegisterSection() {
       const boxHeight = boxRef.current.offsetHeight;
       const scrollY = window.scrollY;
 
-      const navbarOffset = 100; // adjust based on navbar height
+      const navbarOffset = 100;
 
       if (
         scrollY > sectionTop - navbarOffset &&
@@ -33,7 +40,12 @@ export default function RegisterSection() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
 
   return (
@@ -46,7 +58,6 @@ export default function RegisterSection() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="register-container">
-
         {/* LEFT SIDE - PHASE COMPONENT */}
         <motion.div
           className="register-guidelines"
@@ -89,7 +100,6 @@ export default function RegisterSection() {
             <li>Participants must bring laptop, charger & ID card.</li>
           </ul>
         </motion.div>
-
       </div>
 
       {/* REGISTER BUTTON AT BOTTOM */}
@@ -104,7 +114,6 @@ export default function RegisterSection() {
           Register Now
         </motion.button>
       </div>
-
     </motion.section>
   );
 }
