@@ -3,7 +3,6 @@ import "../styles/PrizePool.css";
 import cupImg from "../assets/cup.png";
 import scupImg from "../assets/silver-cup.png";
 import bcupImg from "../assets/bronze-cup.png";
-import bImg from "../assets/badge.png";
 
 export default function PrizePool() {
   return (
@@ -16,7 +15,6 @@ export default function PrizePool() {
         transition={{ duration: 0.8 }}
       >
         <h2>Grand Prize Pool</h2>
-        {/* <p>Total Worth ₹1,00,000+</p> */}
       </motion.div>
 
       <div className="luxury-podium">
@@ -64,7 +62,7 @@ export default function PrizePool() {
           <h1>₹15,000</h1>
         </motion.div>
 
-        {/* Special Category */}
+        {/* Special */}
         <motion.div
           className="lux-card special"
           initial={{ opacity: 0, y: 80 }}
@@ -79,6 +77,23 @@ export default function PrizePool() {
         </motion.div>
 
       </div>
+
+      {/* ⭐ NEW INFO BOXES */}
+      <motion.div
+        className="prize-info-container"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <div className="prize-info-box">
+          Hackathon open for both <strong>Arts</strong> & <strong>Engineering</strong> students
+        </div>
+
+        <div className="prize-info-box">
+          Registration Fee: <strong>₹600 per team</strong>
+        </div>
+      </motion.div>
+
     </section>
   );
 }

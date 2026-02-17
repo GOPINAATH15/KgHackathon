@@ -7,7 +7,7 @@ export default function Rules() {
       title: "Team Formation",
       points: [
         "Each team must consist of 3 or 4 members",
-        "Each team must have 1 female member",
+        "Atlest 1 female member in each team",
         "All members must belong to the same college/institution",
         "Cross-college teams are strictly not permitted",
         "Each participant may join only one team",

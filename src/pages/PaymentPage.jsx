@@ -7,7 +7,7 @@ export default function PaymentPage() {
   const navigate = useNavigate();
 
   const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbzv2IGTVMyONWLAYTms2gWv9b04JQsAhkL-AuKHwJ8WfKVouxZgtMm5Bs6zPyghacZs/exec";
+    "https://script.google.com/macros/s/AKfycbzMxo4uKTXZPb_SiU9lqFgRhS-KyO7vSIu2gtNPDwK-2oCo-nohjiIc9ZJKxATfljs/exec";
 
   const [formData, setFormData] = useState(null);
   const [transactionId, setTransactionId] = useState("");

@@ -18,15 +18,15 @@ export default function Navbar() {
           path: "/domains/women-cyber-safety",
         },
         {
-          label: "Night Safety Risk Prediction System",
+          label: "Voice-Based Safety Assistant",
           path: "/domains/women-night-safety",
         },
         {
-          label: "AI-Based Personal Safety Companion",
+          label: "AI-Powered Public Transport Safety Intelligence System",
           path: "/domains/women-personal-safety",
         },
         {
-          label: "Cyber Harassment Detection & Prevention Platform",
+          label: "Smart Campus Safety Ecosystem",
           path: "/domains/women-cyber-harassment",
         },
       ],
@@ -35,19 +35,19 @@ export default function Navbar() {
       title: "Healthcare Technology",
       sub: [
         {
-          label: "AI-Based Early Disease Risk Prediction System",
+          label: "AI-Based Laboratory Test Interpretation Assistant",
           path: "/domains/disease-prediction",
         },
         {
-          label: "Smart Emergency Response Coordination Platform",
+          label: "AI-Based Mental Health Early Warning System",
           path: "/domains/emergency-response",
         },
         {
-          label: "AI-Based Sleep Health Monitoring & Recommendation System",
+          label: "Smart Rural Healthcare Access Platform",
           path: "/domains/sleep-health-monitoring",
         },
         {
-          label: "Remote Patient Monitoring Dashboard",
+          label: "AI-Based Medication Adherence Tracker",
           path: "/domains/remote-patient-monitoring",
         },
       ],
@@ -60,11 +60,11 @@ export default function Navbar() {
           path: "/domains/food-waste-management",
         },
         {
-          label: "Smart Energy Efficiency & Consumption Optimization Platform",
+          label: "AI-Based Water Usage Optimization Platform",
           path: "/domains/smart-energy-optimization",
         },
         {
-          label: "Smart Building Sustainability Monitoring System",
+          label: "Climate Risk Early Alert System",
           path: "/domains/smart-building-sustainability",
         },
         {
@@ -81,15 +81,15 @@ export default function Navbar() {
           path: "/domains/resume-screening",
         },
         {
-          label: "AI Academic Integrity & Plagiarism Detection ",
+          label: "AI Code Quality Assistant for Students",
           path: "/domains/academic-integrity",
         },
         {
-          label: "AI-Based Personalized Learning Path Generator",
+          label: "AI Meeting Intelligence Assistant",
           path: "/domains/personalized-learning",
         },
         {
-          label: "AI Skill Intelligence Platform for Industry Readiness",
+          label: "Autonomous Workflow Automation Builder (No-Code AI)",
           path: "/domains/skill-intelligence-platform",
         },
       ],
@@ -105,11 +105,11 @@ export default function Navbar() {
     >
       <Link to="/" className="kg-logo-wrapper">
       
-         <img
+         {/* <img
           src="/Kg-logo.png"
           alt="College Logo"
           className="kg-college-logo"
-        />
+        /> */}
 
      
        
@@ -125,9 +125,9 @@ export default function Navbar() {
       </div>
 
       <div className={`kg-nav-links ${mobileOpen ? "active" : ""}`}>
-        <Link to="/" onClick={() => setMobileOpen(false)}>ome</Link>
+        <Link to="/" onClick={() => setMobileOpen(false)}>Home</Link>
         <Link to="/about" onClick={() => setMobileOpen(false)}>About</Link>
-        <Link to="/phases" onClick={() => setMobileOpen(false)}>Phases</Link>
+        <Link to="/phases" onClick={() => setMobileOpen(false)}>Journey</Link>
         <Link to="/schedule" onClick={() => setMobileOpen(false)}>Schedule</Link>
         <Link to="/rules" onClick={() => setMobileOpen(false)}>Rules</Link>
 

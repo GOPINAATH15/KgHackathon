@@ -12,7 +12,7 @@ export default function Phase() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Hackathon Phases
+          Hackathon Journey
         </motion.h2>
 
         {/* PHASE I */}
@@ -37,13 +37,37 @@ export default function Phase() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h3>Phase II — On-Campus 30-Hour Hackathon</h3>
+          <h3>Phase II — On-Campus 24-Hour Hackathon</h3>
+          <p><strong>(Round 1 — Preliminary Development Round)</strong></p>
           <ul>
-            <li>Check-in : ID verification & opening briefing.</li>
-            <li>Kick-off : Revisit problem & finalize approach.</li>
-            <li>Build (30 Hours) : Develop solution using approved tools & AI.</li>
-            <li>After (24 Hours) : Elimination will occur</li>
-            <li>Mentorship : Progress reviews & technical guidance.</li>
+            <li><strong>Duration:</strong> 10:00 AM (05 March 2026) to 10:00 AM (06 March 2026)</li>
+            <li>Continuous 24-hour development phase.</li>
+          </ul>
+
+          <ul>
+            <li><strong>Arrival & Check-in:</strong> Teams report to the venue, ID verification, seating allocation, opening briefing & rules explanation.</li>
+            <li><strong>Kick-off & Problem Understanding:</strong> Revisit problem statement, clarify requirements, finalize architecture & development plan.</li>
+            <li><strong>Build Your Solution (24 Hours):</strong> Design system architecture, develop MVP, integrate tools/frameworks/AI, implement core features.</li>
+            <li><strong>Mentorship & Progress Review:</strong> Guidance during checkpoints, technical validation & GitHub progress review.</li>
+          </ul>
+
+          <ul>
+            <li><strong>Round 1 Final Submission:</strong></li>
+            <li> Working prototype / MVP</li>
+            <li> Source code repository</li>
+            <li> Documentation (README.md)</li>
+            <li> Presentation deck</li>
+          </ul>
+
+          <ul>
+            <li><strong>Evaluation & Shortlisting Criteria:</strong></li>
+            <li> Innovation & Creativity</li>
+            <li> Technical Implementation</li>
+            <li> SDG Alignment & Impact</li>
+            <li> Feasibility & Scalability</li>
+            <li> Presentation Readiness</li>
+            <li><strong>Top 10% teams will be shortlisted for the final round.</strong></li>
+            <li>Remaining teams conclude participation after Round 1.</li>
           </ul>
         </motion.div>
 
@@ -54,11 +78,13 @@ export default function Phase() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h3>Phase III — Evaluation & Showcase</h3>
+          <h3>Phase III — Final Evaluation & Showcase</h3>
+          <p><strong>(Round 2 — Jury Presentation)</strong></p>
+
           <ul>
-            <li>Final Submission : MVP, source code, documentation.</li>
-            <li>Demo & Pitch : Live presentation before judges.</li>
-            <li>Showcase & Win : Awards for innovation, SDG impact & excellence.</li>
+            <li><strong>Live Jury Presentation:</strong> Deliver presentation, demonstrate prototype, explain architecture & decisions, respond to jury questions.</li>
+            <li><strong>Final Evaluation:</strong> Judged on innovation, technical depth, real-world applicability, SDG impact, scalability & presentation clarity.</li>
+            <li><strong>Showcase & Winner Announcement:</strong> Winners selected from shortlisted teams and announced during the closing ceremony.</li>
           </ul>
         </motion.div>
 

@@ -1,5 +1,5 @@
 import "../styles/Footer.css";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaLinkedinIn, FaPhone, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
@@ -22,16 +22,16 @@ export default function Footer() {
           <div className="footer-contact">
             <h4>Contact Details</h4>
 
-            <p>Event Coordinator : Dr. S. Boopalan</p>
+            <p><a style={{ color: "gold" }}>Event Coordinator :</a> Dr. S. Boopalan</p>
             <p>Mobile: +91 99526 84608</p>
 
-            <p>Program Coordinator : Dr. M. Usha</p>
+            <p><a style={{ color: "gold" }}>Program Coordinator :</a> Dr. M. Usha</p>
             <p>Mobile: +91 94877 90087</p>
 
-            <p>Technical Co-ordinator : Mr.Dharaneesh Selvaraj</p>
+            <p> <a style={{ color: "gold" }}>Technical Co-ordinator :</a> Mr.Dharaneesh Selvaraj</p>
             <p>Mobile: +91 97906 42068</p>
 
-            <p>Student Coordinators : A. Gopinaath & A. Anirudhan</p>
+            <p><a style={{ color: "gold" }}>Student Coordinators :</a> A. Gopinaath & A. Anirudhan</p>
             <p>Mobile: +91 93458 84778 & +91 93455 67535</p>
 
             <p className="email">

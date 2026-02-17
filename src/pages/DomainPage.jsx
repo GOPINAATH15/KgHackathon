@@ -11,10 +11,10 @@ import womensafetyImg from "../assets/domain-images/womensafety.jpeg";
 export default function DomainPage() {
 
   const domains = [
-    { name: "Artificial Intelligence & Machine Learning", image: aiImg },
+    { name: "Women Safety & Empowerment", image: womensafetyImg },
     { name: "HealthCare & Wellness", image: healthImg },
     { name: "Sustainable Development & Environment", image: sustainableImg },
-    { name: "Women Safety & Empowerment", image: womensafetyImg },
+    { name: "Artificial Intelligence & Machine Learning", image: aiImg },
     // { name: "Data Science & Analytics", image: dataImg }
   ];
 

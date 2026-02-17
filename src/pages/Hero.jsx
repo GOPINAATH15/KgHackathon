@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../styles/components.css";
 import heroVideo from "../assets/bg-hero1.mp4";
+import heroVideo1 from "../assets/bg-hero2.webm";
 import heroBgvideo from "../assets/bg.mp4";
 import DomainPage from "./DomainPage";
 
@@ -20,6 +21,10 @@ import g10 from "../assets/hackathon-image/hackathon-image10.jpeg";
 import g11 from "../assets/hackathon-image/hackathon-image11.jpeg";
 import g12 from "../assets/hackathon-image/hackathon-image12.jpeg";
 import g13 from "../assets/hackathon-image/hackathon-image13.jpeg";
+import kgcasImg from "../assets/kgcas.jpeg";
+import kgcasImg1 from "../assets/kgcas2.jpeg";
+import kgeduImg from "../assets/kgedu.jpeg";
+import kgiimImg from "../assets/kgiim1.jpeg";
 import PrizePool from "./PrizePool";
 // import Phase from "./Phase";
 
@@ -69,10 +74,41 @@ export default function Hero() {
 
         {/* Content */}
         <motion.div className="hero-content">
-          <div className="hero-logo-right">
-            <img src={logoImg} alt="Hackathon Logo" />
+
+          <div className="hero-top-images">
+            <img src={kgeduImg} alt="hackathon" className="top-img" />
+
+            <div className="bottom-images">
+              <img src={kgcasImg1} alt="hackathon" />
+              <img src={kgiimImg} alt="hackathon" />
+            </div>
           </div>
 
+          {/* RIGHT SIDE INFO (above logo) */}
+          <div className="hero-right-block">
+            <div className="hero-info">
+              <div>
+                <span>Date</span>
+                <p>
+                  5<sup>th</sup> March 26 - 6<sup>th</sup> March 26
+                </p>
+              </div>
+              <div>
+                <span>Time</span>
+                <p>
+                  5<sup>th</sup> 9:00 A.M. – 6<sup>th</sup> 04:00 P.M.
+                </p>
+              </div>
+              <div>
+                <span>Venue</span>
+                <p>KGiSL CAMPUS</p>
+              </div>
+            </div>
+
+            <div className="hero-logo-right">
+              <img src={logoImg} alt="Hackathon Logo" />
+            </div>
+          </div>
 
           <h1 className="hero-title">
             <span className="red-letter">K</span>reative
@@ -80,34 +116,7 @@ export default function Hero() {
           </h1>
 
           <h2>Ignite Ideas. Build the Future.</h2>
-          <h2>National Level 30-Hour Innovation Hackathon</h2>
-
-          <p>
-            KreativeGenesis 2026 is a premier national-level hackathon organized by
-            KGiSL Educational Institutions, bringing together innovative minds
-            from across institutions to design impactful technology-driven
-            solutions.
-
-          </p>
-
-          <div className="hero-info">
-            <div>
-              <span>Date</span>
-              <p>5th March 26 - 6th March 26</p>
-            </div>
-            <div>
-              <span>Time</span>
-              <p>5th 9:00 a.m. – 6th 11:00 a.m.</p>
-            </div>
-            <div>
-              <span>Venue</span>
-              <p>KGiSL CAMPUS</p>
-            </div>
-            {/* <div>
-              <span>Campus</span>
-              <p>KGiSL CAMPUS</p>
-            </div> */}
-          </div>
+          <h2>30 Hour National-Level Innovation Hackathon</h2>
 
           <div className="hero-actions">
             <button onClick={() => navigate("/register")} className="primary-btn">
