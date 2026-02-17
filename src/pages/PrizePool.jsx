@@ -86,7 +86,7 @@ export default function PrizePool() {
         transition={{ duration: 0.7 }}
       >
         <div className="prize-info-box">
-          Hackathon open for both <strong>Arts</strong> & <strong>Engineering</strong> students
+          Hackathon Eligible for both <strong>Engineering</strong> & <strong>Arts and Science</strong> students
         </div>
 
         <div className="prize-info-box">

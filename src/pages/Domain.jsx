@@ -17,7 +17,8 @@ const domainData = {
     domainTitle: "Women's Safety & Social Security",
     image: womensafetyImg,
 
-    problemTitle: "AI-Driven Cyber Safety Awareness & Phishing Detection Platform",
+    problemNumber: 1,
+    problemTitle: "Cyber Safety Awareness & Phishing Detection Platform",
 
     realWorldContext:
       "Digital fraud, phishing attacks, and social engineering scams are increasing globally, disproportionately affecting vulnerable users, including women, students, and first-time internet users. Many individuals lack awareness and real-time protection mechanisms against evolving cyber threats.",
@@ -29,14 +30,14 @@ const domainData = {
       "Students and general internet users",
       "Women and vulnerable digital users",
       "Educational institutions",
-      "Cybersecurity awareness organizations"
+      "Cybersecurity awareness organizations",
     ],
 
     solutionExpectations: [
       "Analyze text, emails, URLs, or messages for phishing indicators",
       "Provide risk classification and explanations",
       "Offer contextual safety tips and awareness modules",
-      "Display user-friendly alerts"
+      "Display user-friendly alerts",
     ],
 
     innovationScope: [
@@ -44,14 +45,14 @@ const domainData = {
       "Browser extensions",
       "Mobile apps or desktop tools",
       "Edge security devices",
-      "Explainable AI interfaces"
+      "Explainable AI interfaces",
     ],
 
     technicalApproach: [
       "React / Flutter frontend",
       "Python FastAPI / Node.js backend",
       "NLP models / heuristic detection",
-      "Cloud or local processing"
+      "Cloud or local processing",
     ],
 
     expectedDeliverables: [
@@ -59,21 +60,22 @@ const domainData = {
       "Threat detection demonstration",
       "Architecture diagram",
       "GitHub repository",
-      "Demo video (optional)"
+      "Demo video (optional)",
     ],
 
     constraintsGuidelines: [
       "Real email integration optional (simulation allowed)",
       "Must explain detection logic",
-      "Privacy-focused design encouraged"
-    ]
+      "Privacy-focused design encouraged",
+    ],
   },
 
   "voice-based-safety-assistant": {
     domainTitle: "Women's Safety & Social Security",
     image: womensafetyImg,
 
-    problemTitle: "AI-Powered Voice-Based Safety Assistant for Emergency Support",
+    problemNumber: 2,
+    problemTitle: "Voice-Based Safety Assistant",
 
     realWorldContext:
       "In emergencies, users may not be able to operate complex interfaces. Voice-based interaction enables faster response, especially for individuals with limited literacy or accessibility needs.",
@@ -85,47 +87,48 @@ const domainData = {
       "Women and vulnerable individuals",
       "Elderly users",
       "People with accessibility challenges",
-      "Night commuters"
+      "Night commuters",
     ],
 
     solutionExpectations: [
       "Voice command recognition",
       "SOS triggering through voice",
       "Multilingual or regional language support",
-      "Emergency response workflows"
+      "Emergency response workflows",
     ],
 
     innovationScope: [
       "Offline speech recognition",
       "Embedded safety devices",
       "Wearable assistants",
-      "AI conversational systems"
+      "AI conversational systems",
     ],
 
     technicalApproach: [
       "Speech-to-text APIs or offline models",
       "Mobile/web interface or embedded hardware",
-      "Integration with notification systems"
+      "Integration with notification systems",
     ],
 
     expectedDeliverables: [
       "Working prototype",
       "Voice interaction demo",
       "Architecture explanation",
-      "Demo scenario video"
+      "Demo scenario video",
     ],
 
     constraintsGuidelines: [
       "Must include false-trigger handling",
-      "Offline or low-network solutions encouraged"
-    ]
+      "Offline or low-network solutions encouraged",
+    ],
   },
 
   "public-transport-safety-intelligence": {
     domainTitle: "Women's Safety & Social Security",
     image: womensafetyImg,
 
-    problemTitle: "AI-Based Public Transport Safety Intelligence & Risk Monitoring System",
+    problemNumber: 3,
+    problemTitle: "Public Transport Safety Intelligence System",
 
     realWorldContext:
       "Public transportation environments can pose safety challenges due to crowd dynamics, environmental conditions, and unpredictable incidents. Current safety systems lack predictive intelligence.",
@@ -137,47 +140,48 @@ const domainData = {
       "Daily commuters",
       "Women travelers",
       "Public transport authorities",
-      "Smart city planners"
+      "Smart city planners",
     ],
 
     solutionExpectations: [
       "Risk prediction based on contextual data",
       "Monitoring dashboard",
       "Real-time or simulated alerts",
-      "Visualization of safe vs risky conditions"
+      "Visualization of safe vs risky conditions",
     ],
 
     innovationScope: [
       "Computer vision-based monitoring",
       "IoT sensors",
       "Wearable alert devices",
-      "AI prediction models"
+      "AI prediction models",
     ],
 
     technicalApproach: [
       "Map visualization platforms",
       "AI/ML analytics",
-      "IoT simulation or hardware integration"
+      "IoT simulation or hardware integration",
     ],
 
     expectedDeliverables: [
       "Prototype system",
       "Safety risk visualization",
       "Demonstration scenario",
-      "GitHub repository"
+      "GitHub repository",
     ],
 
     constraintsGuidelines: [
       "Real CCTV integration is not required",
-      "Simulation-based data is acceptable"
-    ]
+      "Simulation-based data is acceptable",
+    ],
   },
 
   "smart-campus-safety-ecosystem": {
     domainTitle: "Women's Safety & Social Security",
     image: womensafetyImg,
 
-    problemTitle: "Integrated Smart Campus Safety & Emergency Response Ecosystem",
+    problemNumber: 4,
+    problemTitle: "Smart Campus Safety Ecosystem",
 
     realWorldContext:
       "Educational campuses require proactive safety infrastructure to manage emergencies, monitor environments, and provide rapid response mechanisms. Traditional security systems are reactive and fragmented.",
@@ -188,39 +192,39 @@ const domainData = {
     targetUsers: [
       "Students and faculty",
       "Campus security teams",
-      "Institutional administrators"
+      "Institutional administrators",
     ],
 
     solutionExpectations: [
       "Emergency alert workflows",
       "Smart monitoring dashboard",
       "Zone-based safety tracking",
-      "Incident reporting interface"
+      "Incident reporting interface",
     ],
 
     innovationScope: [
       "AI surveillance analytics",
       "Smart SOS kiosks",
       "Mobile safety apps",
-      "IoT-based safety sensors"
+      "IoT-based safety sensors",
     ],
 
     technicalApproach: [
       "Web/mobile frontend",
       "AI analytics or rule-based models",
-      "Embedded hardware or IoT simulation"
+      "Embedded hardware or IoT simulation",
     ],
 
     expectedDeliverables: [
       "Functional prototype",
       "Campus safety scenario demo",
-      "System architecture documentation"
+      "System architecture documentation",
     ],
 
     constraintsGuidelines: [
       "Real hardware optional",
-      "Ethical and privacy considerations mandatory"
-    ]
+      "Ethical and privacy considerations mandatory",
+    ],
   },
 
   /* ============================= */
@@ -231,7 +235,8 @@ const domainData = {
     domainTitle: "Healthcare Technology",
     image: healthcareImg,
 
-    problemTitle: "AI-Powered Laboratory Test Interpretation & Clinical Insight Assistant",
+    problemNumber: 1,
+    problemTitle: "Laboratory Test Interpretation Assistant",
 
     realWorldContext:
       "Patients and even junior healthcare professionals often struggle to interpret laboratory reports due to complex medical terminology and reference ranges. Misunderstanding lab results can lead to anxiety, delayed medical action, or improper self-assessment.",
@@ -243,28 +248,28 @@ const domainData = {
       "Patients and caregivers",
       "Medical students and junior clinicians",
       "Telemedicine platforms",
-      "Health awareness applications"
+      "Health awareness applications",
     ],
 
     solutionExpectations: [
       "Input interface for lab values",
       "An interpretation engine with explanation logic",
       "Risk-level visualization (informational only)",
-      "User-friendly health insights dashboard"
+      "User-friendly health insights dashboard",
     ],
 
     innovationScope: [
       "AI-driven medical explanation engine",
       "NLP-based health guidance",
       "Voice-based explanation interface",
-      "Integration with wearable or health tracking apps"
+      "Integration with wearable or health tracking apps",
     ],
 
     technicalApproach: [
       "Web/mobile application",
       "Rule-based + AI model interpretation",
       "Medical dataset mapping",
-      "Visualization tools"
+      "Visualization tools",
     ],
 
     expectedDeliverables: [
@@ -272,21 +277,22 @@ const domainData = {
       "Sample lab dataset demonstration",
       "Interpretation logic explanation",
       "GitHub repository",
-      "Demo video"
+      "Demo video",
     ],
 
     constraintsGuidelines: [
       'Must include disclaimer: "Not a medical diagnosis."',
       "Explainable outputs required",
-      "Avoid black-box decisions"
-    ]
+      "Avoid black-box decisions",
+    ],
   },
 
   "mental-health-early-warning-system": {
     domainTitle: "Healthcare Technology",
     image: healthcareImg,
 
-    problemTitle: "AI-Driven Mental Health Early Warning & Wellbeing Monitoring System",
+    problemNumber: 2,
+    problemTitle: "Mental Health Early Warning System",
 
     realWorldContext:
       "Mental health challenges such as stress, anxiety, and burnout are increasing globally. Early detection mechanisms are limited, and individuals often seek support only after symptoms escalate.",
@@ -297,49 +303,50 @@ const domainData = {
     targetUsers: [
       "Students and professionals",
       "Mental health awareness platforms",
-      "Counselors and wellness programs"
+      "Counselors and wellness programs",
     ],
 
     solutionExpectations: [
       "Behavioral or conversational data analysis",
       "Risk trend visualization",
       "Wellness recommendation engine",
-      "User privacy-focused design"
+      "User privacy-focused design",
     ],
 
     innovationScope: [
       "NLP emotion analysis",
       "Voice tone analysis",
       "Wearable sensor integration",
-      "AI-driven wellness suggestions"
+      "AI-driven wellness suggestions",
     ],
 
     technicalApproach: [
       "AI/NLP sentiment models",
       "Time-series behavioral analysis",
       "Mobile or web interface",
-      "Edge processing for privacy (optional)"
+      "Edge processing for privacy (optional)",
     ],
 
     expectedDeliverables: [
       "Working prototype",
       "Demo scenario showing risk detection",
       "Explanation of AI logic",
-      "GitHub repository"
+      "GitHub repository",
     ],
 
     constraintsGuidelines: [
       "Ethical design mandatory",
       "Privacy-first architecture required",
-      "Not a medical diagnostic tool"
-    ]
+      "Not a medical diagnostic tool",
+    ],
   },
 
   "rural-healthcare-access-platform": {
     domainTitle: "Healthcare Technology",
     image: healthcareImg,
 
-    problemTitle: "Smart Rural Healthcare Access & Low-Bandwidth Telemedicine Platform",
+    problemNumber: 3,
+    problemTitle: "Rural Healthcare Access Platform",
 
     realWorldContext:
       "Rural populations often lack access to healthcare due to connectivity challenges, resource shortages, and infrastructure limitations. Digital health systems must function in low-bandwidth environments.",
@@ -351,48 +358,49 @@ const domainData = {
       "Rural patients",
       "Community health workers",
       "Primary healthcare centers",
-      "NGOs and public health agencies"
+      "NGOs and public health agencies",
     ],
 
     solutionExpectations: [
       "Offline-first design",
       "Symptom-based triage module",
       "Telemedicine or consultation workflow",
-      "Local health resource mapping"
+      "Local health resource mapping",
     ],
 
     innovationScope: [
       "Edge computing solutions",
       "SMS/voice-based systems",
       "Portable health kiosk prototypes",
-      "AI symptom classification"
+      "AI symptom classification",
     ],
 
     technicalApproach: [
       "Progressive Web Apps (PWA)",
       "Lightweight backend architecture",
       "Offline data synchronization",
-      "IoT health devices (optional)"
+      "IoT health devices (optional)",
     ],
 
     expectedDeliverables: [
       "Functional prototype",
       "Demonstration using a simulated rural scenario",
       "Architecture diagram",
-      "GitHub repository"
+      "GitHub repository",
     ],
 
     constraintsGuidelines: [
       "Must work in low-connectivity conditions (simulation acceptable)",
-      "Privacy and data protection considerations required"
-    ]
+      "Privacy and data protection considerations required",
+    ],
   },
 
   "medication-adherence-tracker": {
     domainTitle: "Healthcare Technology",
     image: healthcareImg,
 
-    problemTitle: "AI-Enabled Medication Adherence Monitoring & Reminder System",
+    problemNumber: 4,
+    problemTitle: "Medication Adherence Tracker",
 
     realWorldContext:
       "Medication non-adherence is a major global healthcare issue leading to ineffective treatment outcomes and increased healthcare costs. Patients often forget dosage schedules or misunderstand prescriptions.",
@@ -404,41 +412,41 @@ const domainData = {
       "Chronic disease patients",
       "Elderly individuals",
       "Caregivers and families",
-      "Healthcare providers"
+      "Healthcare providers",
     ],
 
     solutionExpectations: [
       "Medication scheduling interface",
       "Smart reminder system",
       "Adherence tracking dashboard",
-      "Alert mechanism for missed doses"
+      "Alert mechanism for missed doses",
     ],
 
     innovationScope: [
       "Smart pillbox hardware integration",
       "Voice reminders",
       "AI adherence pattern prediction",
-      "Wearable integration"
+      "Wearable integration",
     ],
 
     technicalApproach: [
       "Mobile/web application",
       "Notification systems",
       "AI pattern analysis (optional)",
-      "IoT sensor integration"
+      "IoT sensor integration",
     ],
 
     expectedDeliverables: [
       "Functional prototype",
       "Adherence workflow demonstration",
       "System architecture",
-      "GitHub repository"
+      "GitHub repository",
     ],
 
     constraintsGuidelines: [
       "Real medical integration is not required",
-      "Must include clear user safety messaging"
-    ]
+      "Must include clear user safety messaging",
+    ],
   },
 
   /* ============================= */
@@ -449,7 +457,8 @@ const domainData = {
     domainTitle: "Sustainable Environment & Green Technology",
     image: sustainableImg,
 
-    problemTitle: "AI-Driven Food Waste Reduction & Intelligent Redistribution Platform",
+    problemNumber: 1,
+    problemTitle: "Food Waste Reduction & Redistribution",
 
     realWorldContext:
       "Food wastage contributes significantly to environmental pollution and resource inefficiency, while many communities face food insecurity. Efficient redistribution of surplus food remains a logistical and predictive challenge.",
@@ -461,28 +470,28 @@ const domainData = {
       "Restaurants and event organizers",
       "Educational institutions and hostels",
       "NGOs and food redistribution networks",
-      "Sustainability-focused organizations"
+      "Sustainability-focused organizations",
     ],
 
     solutionExpectations: [
       "Food donor registration interface",
       "Surplus prediction or detection module",
       "Matching system between donors and receivers",
-      "Logistics visualization or route suggestion"
+      "Logistics visualization or route suggestion",
     ],
 
     innovationScope: [
       "AI prediction models for food surplus",
       "Smart packaging or freshness sensors (hardware option)",
       "Real-time inventory monitoring",
-      "Environmental impact analytics"
+      "Environmental impact analytics",
     ],
 
     technicalApproach: [
       "Web/mobile platform",
       "AI/ML forecasting or rule-based systems",
       "Map-based logistics visualization",
-      "Cloud or edge deployment"
+      "Cloud or edge deployment",
     ],
 
     expectedDeliverables: [
@@ -490,20 +499,21 @@ const domainData = {
       "Redistribution workflow demonstration",
       "Sample dataset and prediction logic",
       "GitHub repository",
-      "Demo video"
+      "Demo video",
     ],
 
     constraintsGuidelines: [
       "Real logistics integration not required (simulation acceptable)",
-      "Must include environmental impact indicators"
-    ]
+      "Must include environmental impact indicators",
+    ],
   },
 
   "water-usage-optimization-platform": {
     domainTitle: "Sustainable Environment & Green Technology",
     image: sustainableImg,
 
-    problemTitle: "AI-Based Water Consumption Monitoring & Optimization System",
+    problemNumber: 2,
+    problemTitle: "Water Usage Optimization Platform",
 
     realWorldContext:
       "Water scarcity and inefficient usage patterns create major environmental challenges. Monitoring consumption and providing actionable insights can significantly reduce wastage and improve sustainability.",
@@ -515,47 +525,48 @@ const domainData = {
       "Residential communities",
       "Industrial facilities",
       "Smart building operators",
-      "Agricultural users"
+      "Agricultural users",
     ],
 
     solutionExpectations: [
       "Water usage visualization dashboard",
       "Inefficiency detection",
       "Recommendation engine for optimization",
-      "Usage trend analysis"
+      "Usage trend analysis",
     ],
 
     innovationScope: [
       "IoT water flow sensors",
       "AI anomaly detection",
       "Predictive consumption analytics",
-      "Gamification for conservation awareness"
+      "Gamification for conservation awareness",
     ],
 
     technicalApproach: [
       "Real-time dashboards",
       "Sensor data simulation or hardware integration",
-      "Data analytics using AI or statistical models"
+      "Data analytics using AI or statistical models",
     ],
 
     expectedDeliverables: [
       "Prototype dashboard",
       "Data visualization outputs",
       "Optimization logic explanation",
-      "Demo scenario"
+      "Demo scenario",
     ],
 
     constraintsGuidelines: [
       "Real sensor deployment optional",
-      "Simulation data allowed"
-    ]
+      "Simulation data allowed",
+    ],
   },
 
   "climate-risk-early-alert-system": {
     domainTitle: "Sustainable Environment & Green Technology",
     image: sustainableImg,
 
-    problemTitle: "AI-Based Climate Risk Prediction & Early Alert Platform",
+    problemNumber: 3,
+    problemTitle: "Climate Risk Prediction & Early Alert Platform",
 
     realWorldContext:
       "Climate change has increased the frequency of extreme weather events such as floods, heatwaves, and storms. Early warning systems can improve preparedness and reduce environmental and human risks.",
@@ -567,47 +578,48 @@ const domainData = {
       "Local communities",
       "Disaster management agencies",
       "Urban planners",
-      "Environmental monitoring organizations"
+      "Environmental monitoring organizations",
     ],
 
     solutionExpectations: [
       "Climate risk prediction module",
       "Alert generation system",
       "Visualization of risk zones",
-      "Scenario-based simulation"
+      "Scenario-based simulation",
     ],
 
     innovationScope: [
       "Satellite or weather dataset analysis",
       "Edge environmental sensors",
       "AI predictive modeling",
-      "Smart notification systems"
+      "Smart notification systems",
     ],
 
     technicalApproach: [
       "Data analytics and visualization tools",
       "Machine learning or rule-based models",
-      "Mapping platforms for geographic visualization"
+      "Mapping platforms for geographic visualization",
     ],
 
     expectedDeliverables: [
       "Functional prototype",
       "Risk prediction demonstration",
       "Architecture overview",
-      "GitHub repository"
+      "GitHub repository",
     ],
 
     constraintsGuidelines: [
       "Real-time weather integration is optional",
-      "Use open datasets or simulated data"
-    ]
+      "Use open datasets or simulated data",
+    ],
   },
 
   "soil-health-sustainable-farming-advisor": {
     domainTitle: "Sustainable Environment & Green Technology",
     image: sustainableImg,
 
-    problemTitle: "AI-Driven Soil Health Analysis & Sustainable Farming Advisory System",
+    problemNumber: 4,
+    problemTitle: "Soil Health & Sustainable Farming Advisor",
 
     realWorldContext:
       "Soil degradation and inefficient farming practices impact crop productivity and environmental sustainability. Farmers require accessible tools that provide data-driven recommendations for eco-friendly agriculture.",
@@ -619,40 +631,40 @@ const domainData = {
       "Farmers and agricultural communities",
       "Agricultural advisors",
       "Agri-tech startups",
-      "Sustainability researchers"
+      "Sustainability researchers",
     ],
 
     solutionExpectations: [
       "Soil data input interface",
       "Crop/fertilizer recommendation engine",
       "Sustainability scoring or eco-impact indicators",
-      "Farmer-friendly visualization"
+      "Farmer-friendly visualization",
     ],
 
     innovationScope: [
       "IoT soil sensors",
       "AI recommendation models",
       "Offline mobile applications for rural use",
-      "Multilingual interfaces"
+      "Multilingual interfaces",
     ],
 
     technicalApproach: [
       "Mobile or web platform",
       "AI/ML or rule-based recommendation systems",
-      "Agricultural datasets integration"
+      "Agricultural datasets integration",
     ],
 
     expectedDeliverables: [
       "Prototype system",
       "Recommendation workflow demonstration",
       "Dataset explanation",
-      "GitHub repository"
+      "GitHub repository",
     ],
 
     constraintsGuidelines: [
       "Real hardware optional",
-      "Must explain recommendation logic clearly"
-    ]
+      "Must explain recommendation logic clearly",
+    ],
   },
 
   /* ============================= */
@@ -663,7 +675,8 @@ const domainData = {
     domainTitle: "AI & Automation",
     image: aiImg,
 
-    problemTitle: "AI-Powered Intelligent Resume Screening & Skill Matching Platform",
+    problemNumber: 1,
+    problemTitle: "Resume Screening & Skill Matching Platform",
 
     realWorldContext:
       "Modern recruitment processes involve analyzing large volumes of resumes manually, which leads to inefficiencies, biases, and delays. Organizations require intelligent tools to match candidate skills with job roles accurately and fairly.",
@@ -675,28 +688,28 @@ const domainData = {
       "Recruiters and HR professionals",
       "Job seekers and students",
       "Educational institutions",
-      "Career development platforms"
+      "Career development platforms",
     ],
 
     solutionExpectations: [
       "Resume upload and parsing system",
       "Skill extraction and classification engine",
       "Job-role matching with scoring",
-      "Candidate ranking or recommendation interface"
+      "Candidate ranking or recommendation interface",
     ],
 
     innovationScope: [
       "NLP-based resume understanding",
       "Skill ontology or knowledge graph",
       "Bias-aware matching algorithms",
-      "AI-powered career recommendation systems"
+      "AI-powered career recommendation systems",
     ],
 
     technicalApproach: [
       "NLP frameworks (spaCy, transformers, etc.)",
       "Web/mobile interface",
       "Backend API with matching algorithms",
-      "Optional vector database or semantic search"
+      "Optional vector database or semantic search",
     ],
 
     expectedDeliverables: [
@@ -704,20 +717,21 @@ const domainData = {
       "Skill matching demonstration",
       "Architecture diagram",
       "GitHub repository",
-      "Demo video"
+      "Demo video",
     ],
 
     constraintsGuidelines: [
       "Transparency in the matching logic is required",
-      "Avoid unfair bias in recommendations"
-    ]
+      "Avoid unfair bias in recommendations",
+    ],
   },
 
   "ai-code-quality-assistant": {
     domainTitle: "AI & Automation",
     image: aiImg,
 
-    problemTitle: "AI-Based Code Quality Analysis & Learning Assistant",
+    problemNumber: 2,
+    problemTitle: "AI Code Quality Assistant",
 
     realWorldContext:
       "Students often struggle with improving coding practices, debugging efficiently, and understanding best practices. Automated tools that provide real-time guidance can significantly enhance learning outcomes.",
@@ -729,47 +743,48 @@ const domainData = {
       "Programming students",
       "Coding bootcamps",
       "Educational institutions",
-      "Self-learners"
+      "Self-learners",
     ],
 
     solutionExpectations: [
       "Code input or repository analysis",
       "Static or dynamic code evaluation",
       "AI-driven suggestions and explanations",
-      "Learning-focused feedback interface"
+      "Learning-focused feedback interface",
     ],
 
     innovationScope: [
       "AI code analysis models",
       "Automated refactoring suggestions",
       "Code visualization tools",
-      "Integration with IDE plugins"
+      "Integration with IDE plugins",
     ],
 
     technicalApproach: [
       "Static analysis tools",
       "AI/LLM integration (optional)",
-      "Web-based coding environment or plugin"
+      "Web-based coding environment or plugin",
     ],
 
     expectedDeliverables: [
       "Working prototype",
       "Code analysis demonstration",
       "Sample evaluation reports",
-      "GitHub repository"
+      "GitHub repository",
     ],
 
     constraintsGuidelines: [
       "Educational focus encouraged",
-      "Avoid reliance on external paid APIs unless simulated"
-    ]
+      "Avoid reliance on external paid APIs unless simulated",
+    ],
   },
 
   "ai-meeting-intelligence-assistant": {
     domainTitle: "AI & Automation",
     image: aiImg,
 
-    problemTitle: "AI-Based Meeting Intelligence & Automated Insight Assistant",
+    problemNumber: 3,
+    problemTitle: "Meeting Intelligence Assistant",
 
     realWorldContext:
       "Meetings generate large amounts of information, but extracting actionable insights manually is time-consuming. Organizations require intelligent tools that summarize discussions and identify key decisions automatically.",
@@ -781,47 +796,48 @@ const domainData = {
       "Corporate teams",
       "Educational institutions",
       "Project managers",
-      "Remote collaboration teams"
+      "Remote collaboration teams",
     ],
 
     solutionExpectations: [
       "Speech-to-text or text input processing",
       "Automated meeting summary generation",
       "Action item extraction",
-      "Meeting analytics dashboard"
+      "Meeting analytics dashboard",
     ],
 
     innovationScope: [
       "Voice recognition systems",
       "AI summarization models",
       "Smart calendar integration",
-      "Hardware-based meeting recording devices"
+      "Hardware-based meeting recording devices",
     ],
 
     technicalApproach: [
       "NLP models for summarization",
       "Audio processing or transcript analysis",
-      "Web/mobile interface"
+      "Web/mobile interface",
     ],
 
     expectedDeliverables: [
       "Functional prototype",
       "Meeting summary demonstration",
       "Architecture overview",
-      "GitHub repository"
+      "GitHub repository",
     ],
 
     constraintsGuidelines: [
       "Real-time audio processing optional",
-      "Privacy and data protection considerations required"
-    ]
+      "Privacy and data protection considerations required",
+    ],
   },
 
   "no-code-workflow-automation-builder": {
     domainTitle: "AI & Automation",
     image: aiImg,
 
-    problemTitle: "AI-Driven Autonomous Workflow Automation Builder (No-Code Platform)",
+    problemNumber: 4,
+    problemTitle: "No-Code Workflow Automation Builder",
 
     realWorldContext:
       "Automation tools often require technical expertise, limiting accessibility for non-programmers. No-code automation platforms can empower users to design workflows visually and automate repetitive tasks.",
@@ -833,41 +849,41 @@ const domainData = {
       "Business users",
       "Students and educators",
       "Startups and small organizations",
-      "Productivity-focused professionals"
+      "Productivity-focused professionals",
     ],
 
     solutionExpectations: [
       "Drag-and-drop workflow builder",
       "Trigger-action automation system",
       "AI-assisted workflow suggestions",
-      "Workflow execution monitoring"
+      "Workflow execution monitoring",
     ],
 
     innovationScope: [
       "Visual automation interfaces",
       "Natural language workflow creation",
       "AI agent-based automation",
-      "Integration with external services (simulation allowed)"
+      "Integration with external services (simulation allowed)",
     ],
 
     technicalApproach: [
       "Web-based builder interface",
       "Backend workflow engine",
-      "AI/NLP for automation suggestions"
+      "AI/NLP for automation suggestions",
     ],
 
     expectedDeliverables: [
       "Functional no-code platform prototype",
       "Automation workflow demonstration",
       "Architecture documentation",
-      "GitHub repository"
+      "GitHub repository",
     ],
 
     constraintsGuidelines: [
       "External API integrations optional",
-      "Must demonstrate at least one end-to-end automation scenario"
-    ]
-  }
+      "Must demonstrate at least one end-to-end automation scenario",
+    ],
+  },
 };
 
 export default function Domain() {
@@ -918,7 +934,7 @@ export default function Domain() {
   const toggleSection = (section) => {
     setExpandedSections((prev) => ({
       ...prev,
-      [section]: !prev[section]
+      [section]: !prev[section],
     }));
   };
 
@@ -932,7 +948,10 @@ export default function Domain() {
         transition={{ duration: 0.6 }}
       >
         <h2>{domain.domainTitle}</h2>
-        <p>{domain.problemTitle}</p>
+
+        <p>
+          Problem Statement : {domain.problemNumber} - {domain.problemTitle}
+        </p>
       </motion.div>
 
       <motion.div
