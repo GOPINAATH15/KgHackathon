@@ -164,15 +164,15 @@ export default function PaymentPage() {
         <h1 className="payment-title">Payment Submission</h1>
 
         <div className="payment-details-box">
-          <p><b>Account Name:</b> HACKATHON EVENT</p>
-          <p><b>Account No:</b> 123456789012</p>
-          <p><b>IFSC Code:</b> SBIN0001234</p>
-          <p><b>Bank Name:</b> STATE BANK OF INDIA</p>
-          <p><b>Branch:</b> CHENNAI</p>
+          <p><b>Account Name:</b> KG COLLEGE OF ARTS AND SCIENCE</p>
+          <p><b>Account No:</b> 3036101501646</p>
+          <p><b>IFSC Code:</b> CNRD0003036</p>
+          <p><b>Bank Name:</b> CANARA BANK</p>
+          <p><b>Branch:</b> KGiSL, SARAVANAMPATTI</p>
 
           <div className="qr-box">
             <img
-              src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=HACKATHON_PAYMENT"
+              src="src/assets/kgcasqr1.jpeg"
               alt="QR Code"
               className="qr-img"
             />

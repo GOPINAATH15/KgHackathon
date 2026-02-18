@@ -34,7 +34,7 @@ export default function Rules() {
         "Projects must align with at least one UN Sustainable Development Goal (SDG)",
         "Solutions must be original and developed by the team",
         "AI tools are allowed for assistance, but core logic must be created by participants",
-        "For all domain both hardware and software need to be bring by the participants",
+"Participants must ensure that all required software tools, development environments, and dependencies are installed and configured on their own systems. The organizing team will not be responsible for software setup.",
       ],
     },
     {
