@@ -74,18 +74,42 @@ export default function Hero() {
 
         {/* Content */}
         <motion.div className="hero-content">
+          <div >
+            <div className="hero-top-images">
+              <img src={kgeduImg} alt="hackathon" className="top-img" />
 
-          <div className="hero-top-images">
-            <img src={kgeduImg} alt="hackathon" className="top-img" />
+              <div className="bottom-images">
+                <img src={kgcasImg1} alt="hackathon" />
+                <img src={kgiimImg} alt="hackathon" />
+              </div>
+            </div>
 
-            <div className="bottom-images">
-              <img src={kgcasImg1} alt="hackathon" />
-              <img src={kgiimImg} alt="hackathon" />
+            {/* RIGHT SIDE INFO (above logo) */}
+
+            <h1 className="hero-title">
+              <span className="red-letter">K</span>reative
+              <span className="red-letter">G</span>enesis Hackathon 2026
+            </h1>
+
+            <h2>Ignite Ideas. Build the Future.</h2>
+            <h2>30 Hour National-Level Innovation Hackathon</h2>
+
+            <div className="hero-actions">
+              <button onClick={() => navigate("/register")} className="primary-btn">
+                Register Now
+              </button>
+              <button onClick={() => navigate("/schedule")} className="secondary-btn">
+                View Schedule
+              </button>
+              <button onClick={() => navigate("/phases")} className="secondary-btn">
+                View Phases
+              </button>
             </div>
           </div>
-
-          {/* RIGHT SIDE INFO (above logo) */}
           <div className="hero-right-block">
+            <div className="hero-logo-right">
+              <img src={logoImg} alt="Hackathon Logo" />
+            </div>
             <div className="hero-info">
               <div>
                 <span>Date</span>
@@ -105,29 +129,6 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="hero-logo-right">
-              <img src={logoImg} alt="Hackathon Logo" />
-            </div>
-          </div>
-
-          <h1 className="hero-title">
-            <span className="red-letter">K</span>reative
-            <span className="red-letter">G</span>enesis Hackathon 2026
-          </h1>
-
-          <h2>Ignite Ideas. Build the Future.</h2>
-          <h2>30 Hour National-Level Innovation Hackathon</h2>
-
-          <div className="hero-actions">
-            <button onClick={() => navigate("/register")} className="primary-btn">
-              Register Now
-            </button>
-            <button onClick={() => navigate("/schedule")} className="secondary-btn">
-              View Schedule
-            </button>
-            <button onClick={() => navigate("/phases")} className="secondary-btn">
-              View Phases
-            </button>
           </div>
         </motion.div>
       </section>

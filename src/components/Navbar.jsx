@@ -106,9 +106,8 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7 }}
     >
-      <Link to="/" className="kg-logo-wrapper">
-        {/* Logo here */}
-      </Link>
+      {/* <Link to="/" className="kg-logo-wrapper">
+      </Link> */}
 
       <div
         className={`kg-hamburger ${mobileOpen ? "open" : ""}`}
@@ -158,7 +157,7 @@ export default function Navbar() {
             }
           }}
         >
-          <span
+          <a href="/#dp"><span
             className="kg-nav-link"
             onClick={() => {
               if (window.innerWidth <= 768) {
@@ -166,8 +165,8 @@ export default function Navbar() {
               }
             }}
           >
-            Domain <span className="kg-caret">▾</span>
-          </span>
+            Domain▾
+          </span></a>
 
           {domainOpen && (
             <div

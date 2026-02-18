@@ -1,5 +1,5 @@
 .domain-page {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding: 140px 8%;
   background: linear-gradient(180deg, black, black);
   text-align: center;

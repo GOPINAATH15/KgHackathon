@@ -70,6 +70,8 @@ body {
 
 /* info row */
 .hero-info {
+  margin-left: 20px;
+  top: -50px;
   display: flex;
   gap: 22px;
   text-align: center;
@@ -90,7 +92,7 @@ body {
 /* logo styling */
 .hero-logo-right img {
   margin-top: 60px;
-  width: 160px;
+  width: 280px;
   max-width: 18vw;
   filter:
     drop-shadow(0 0 25px rgba(137, 113, 34, 0.45))
@@ -98,12 +100,13 @@ body {
 }
 
 
-/* 📱 Tablet
+/* 📱 Tablet */
 @media (max-width: 768px) {
   .hero-right-block {
+
     position: static;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 30px;
   }
 
   .hero-info {
@@ -113,22 +116,22 @@ body {
 }
 
 /* 📱 Mobile */
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
   .hero-logo-right img {
-    width: 90px;
+    /* width: 90px; */
+    /* height: ; */
   }
 
   .hero-info {
     flex-direction: column;
     gap: 6px;
-  } */
-/* } */ 
-/*  */
-
+  }
+}
 .hero-logo-right img {
-  width: 400px;
+  /* width: 400px; */
   /* BIG size */
-  max-width: 20vw;
+  max-width: 60vw;
+  max-height: 300vh;
   opacity: 1.0;
 
   filter:
@@ -434,7 +437,7 @@ body {
 
   .hero-logo-right img {
     width: 120px;
-    height: 80px;
+    height: 110px;
   }
 
   .hero-top-images {
@@ -446,7 +449,6 @@ body {
   }
 
 }
-
 
 /* =============================
    LUXURY GALLERY SECTION

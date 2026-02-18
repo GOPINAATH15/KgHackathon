@@ -129,6 +129,28 @@
   line-height: 1.7;
   color: #c8c8c8;
 }
+/* Premium Glass Highlight Notice */
+.ribbon-note {
+  margin-top: 14px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: rgba(255, 193, 7, 0.12);
+  border-left: 5px solid #ffc107;
+  color: #333;
+  font-weight: 600;
+  list-style: none;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+/* icon indicator */
+.ribbon-note::before {
+  content: "⚠";
+  margin-right: 10px;
+  font-size: 16px;
+}
+
 
 /* =========================
    RESPONSIVE

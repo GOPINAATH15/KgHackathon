@@ -6,7 +6,7 @@ export default function Rules() {
     {
       title: "Team Formation",
       points: [
-        "Each team must consist of 3 or 4 members",
+        "Each team must consist of 3 to 4 members",
         "Atlest 1 female member in each team",
         "All members must belong to the same college/institution",
         "Cross-college teams are strictly not permitted",
@@ -26,16 +26,6 @@ export default function Rules() {
         "Selection of a problem statement is mandatory during registration. ",
       ],
     },
-    // {
-    //   title: "Hackathon Structure",
-    //   points: [
-    //     "The hackathon is conducted in two phases",
-    //     "Phase I: Idea Submission (Abstract, solution, tech stack, SDG alignment)",
-    //     "Shortlisted teams advance to Phase II",
-    //     "Phase II: 30-hour on-campus hackathon",
-    //     "Teams must build a working prototype or MVP",
-    //   ],
-    // },
     {
       title: "Project Development",
       points: [
@@ -44,12 +34,13 @@ export default function Rules() {
         "Projects must align with at least one UN Sustainable Development Goal (SDG)",
         "Solutions must be original and developed by the team",
         "AI tools are allowed for assistance, but core logic must be created by participants",
+        "For all domain both hardware and software need to be bring by the participants",
       ],
     },
     {
       title: "Submission Requirements",
       points: [
-        "Teams must submit:", 
+        "Teams must submit:",
         "Working prototype or MVP demonstration",
         "Source code via GitHub or equivalent platform",
         "README documentation",
@@ -118,9 +109,20 @@ export default function Rules() {
           >
             <h3>{section.title}</h3>
             <ul>
-              {section.points.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
+              {section.points.map((point, i) => {
+                const isProjectDevRibbon =
+                  section.title === "Project Development" &&
+                  i === section.points.length - 1;
+
+                return (
+                  <li
+                    key={i}
+                    className={isProjectDevRibbon ? "ribbon-note" : ""}
+                  >
+                    {point}
+                  </li>
+                );
+              })}
             </ul>
           </motion.div>
         ))}
