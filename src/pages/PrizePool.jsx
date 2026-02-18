@@ -7,6 +7,20 @@ import bcupImg from "../assets/bronze-cup.png";
 export default function PrizePool() {
   return (
     <section className="prize-section" id="prizes">
+      <motion.div
+        className="prize-info-container"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <div className="prize-info-box">
+          Hackathon Eligible for both <strong>Engineering</strong> & <strong>Arts and Science</strong> students
+        </div>
+
+        <div className="prize-info-box">
+          Registration Fee: <strong>₹600 per team</strong>
+        </div>
+        </motion.div>
 
       <motion.div
         className="prize-header"
@@ -79,20 +93,6 @@ export default function PrizePool() {
       </div>
 
       {/* ⭐ NEW INFO BOXES */}
-      <motion.div
-        className="prize-info-container"
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
-        <div className="prize-info-box">
-          Hackathon Eligible for both <strong>Engineering</strong> & <strong>Arts and Science</strong> students
-        </div>
-
-        <div className="prize-info-box">
-          Registration Fee: <strong>₹600 per team</strong>
-        </div>
-      </motion.div>
 
     </section>
   );

@@ -98,7 +98,7 @@ body {
 }
 
 
-/* 📱 Tablet */
+/* 📱 Tablet
 @media (max-width: 768px) {
   .hero-right-block {
     position: static;
@@ -113,7 +113,7 @@ body {
 }
 
 /* 📱 Mobile */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .hero-logo-right img {
     width: 90px;
   }
@@ -121,9 +121,9 @@ body {
   .hero-info {
     flex-direction: column;
     gap: 6px;
-  }
-}
-
+  } */
+/* } */ 
+/*  */
 
 .hero-logo-right img {
   width: 400px;
@@ -447,6 +447,7 @@ body {
 
 }
 
+
 /* =============================
    LUXURY GALLERY SECTION
 ============================= */
@@ -635,55 +636,9 @@ body {
   }
 
 }
-
-@media (max-width: 768px) {
-
-  .gallery-section h2 {
-    margin-bottom: 60px;
-  }
-
-  .gallery-card {
-    height: 260px;
-    border-radius: 20px;
-  }
-
-  .nav-btn {
-    width: 44px;
-    height: 44px;
-    font-size: 20px;
-  }
-
-  /* Keep buttons inside screen */
-  .nav-btn.left {
-    left: 10px;
-  }
-
-  .nav-btn.right {
-    right: 10px;
-  }
-
-  .hero-top-images {
-    justify-content: center;
-  }
-
-  .hero-top-images img {
-    width: 70px;
-    height: 70px;
-  }
-.top-img {
-    width: 240px;
-    height: 75px;
-  }
-
-  .bottom-images {
-    max-width: 520px;
-  }
-
-  .bottom-images img {
-    width: 240px;
-    height: 75px;
-  }
-}
+/* =========================
+   HERO MOBILE STRUCTURE FIX
+========================= */
 
 @media (max-width: 480px) {
 
